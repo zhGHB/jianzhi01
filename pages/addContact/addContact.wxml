@@ -1,2 +1,88 @@
-<!--pages/addContact/addContact.wxml-->
-<text>pages/addContact/addContact.wxml</text>
+<view class="box">
+	<view class="item-box bgF">
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">网名</text>
+			</view>
+			<view class="flex1 flex alignCenter">
+				<input type="text" name="netName" placeholder="填写网名" class="input"/>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">真实姓名</text>
+			</view>
+			<view class="flex1 flex alignCenter">
+				<input type="text" name="netName" placeholder="填写真实姓名" class="input"/>
+			</view>
+		</view>
+		
+		
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">手机号码</text>
+			</view>
+			<view class="flex1 flex alignCenter">
+				<input type="text" name="netName" placeholder="填写手机号码" class="input"/>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">证件类型</text>
+			</view>
+			<view class="flex1 flex alignCenter text-right">
+				<!-- <input type="text" name="netName" placeholder="填写真实姓名" class="input"/> -->
+				<text class="right-text">身份证</text>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">证件号</text>
+			</view>
+			<view class="flex1 flex alignCenter">
+				<input type="text" name="netName" placeholder="填写证件号" class="input"/>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">出生日期  </text>
+			</view>
+			<view class="flex1 flex alignCenter text-right">
+				<!-- <input type="text" name="netName" placeholder="填写真实姓名" class="input"/> -->
+				<text class="right-text">1991-04-28  </text>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">性别</text>
+			</view>
+			<view class="flex1 flex alignCenter text-right">
+				<!-- <input type="text" name="netName" placeholder="填写真实姓名" class="input"/> -->
+				<text class="right-text">女</text>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">紧急联系人</text>
+			</view>
+			<view class="flex1 flex alignCenter">
+				<input type="text" name="netName" placeholder="填写紧急联系人" class="input"/>
+			</view>
+		</view>
+		<view class="item flex">
+			<view class="flex alignCenter">
+				<text class="name-text">紧急联系人手机号</text>
+			</view>
+			<view class="flex1 flex alignCenter">
+				<input type="text" name="netName" placeholder="填写紧急联系人手机号" class="input"/>
+			</view>
+		</view>
+	</view>
+	<view class="btn-box bgY colorF border-radius20">
+			保存
+	</view>
+
+</view>
+
+
+

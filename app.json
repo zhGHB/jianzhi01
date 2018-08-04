@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/myPurse/myPurse",
     "pages/addContact/addContact",
     "pages/myOrder/myOrder",
     "pages/orderConfirmation/orderConfirmation",

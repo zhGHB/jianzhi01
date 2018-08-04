@@ -1,0 +1,27 @@
+/* pages/myPurse/myPurse.wxss */
+page {
+	background: #F5EFEF
+}
+.top-title {
+	font-size:32rpx;font-weight: bold;
+}
+.money {
+	font-size:120rpx;
+	height: 120rpx;line-height: 120rpx;margin-top: 34rpx;
+	padding-bottom: 17rpx;
+}
+.top {
+	font-size:0;padding-left: 45rpx;margin-top: 1rpx;padding-top:34rpx;padding-bottom: 14rpx;
+}
+.right-icon {
+	width:16rpx;height: 27rpx;
+}
+.item {
+	padding:26rpx 54rpx 20rpx 43rpx;margin-bottom: 3px;margin-left: 6rpx;margin-right: 6rpx;
+}
+.item-box {
+	margin-top: 20rpx;
+}
+.item-text {
+
+}
