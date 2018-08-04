@@ -1,0 +1,17 @@
+<view class="widthdraw-box">
+	<view class="top bgF">
+		<view class="money-title fontM"><text class="mr58">可提现金额¥0.00</text> <text>冻结金额¥0.00</text></view>
+		<view class="input-box flex">
+			<view class="flex">
+				<text class="input-box-text">Y</text>
+			</view>
+			<view class="flex alignCenter">
+				<input class="money-input input-box-text" value="0.00"/>
+			</view>
+		</view>
+	</view>
+	<view class="btn bgY textCenter colorF">确认提现</view>
+	<view class="tip fontM">
+		提示：提现的余额到微信钱包  
+	</view>
+</view>

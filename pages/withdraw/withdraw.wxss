@@ -1,0 +1,26 @@
+/* pages/withdraw/withdraw.wxss */
+.top {
+	border:1px solid red;
+	padding: 33rpx 53rpx 61rpx 53rpx;margin-top: 50rpx;
+}
+.money-title {
+	color:#2F2E2E;font-size:32rpx;
+}
+.input-box {
+	color:#2F2E2E; font-size: 0;margin-top: 40rpx;
+}
+.input-box-text {
+	font-size: 120rpx;height: 120rpx;line-height: 120rpx;
+}
+.money-input {
+	height: 120rpx;
+}
+.btn {
+	font-size:42rpx;height: 85rpx;line-height: 85rpx;
+}
+.mr58 {
+	margin-right: 58rpx;
+}
+.tip {
+	font-size:32rpx;color:#857F7F;margin:38rpx 0 0 31rpx;
+}

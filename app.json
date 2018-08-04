@@ -1,12 +1,14 @@
 {
   "pages":[
+    "pages/orderConfirmation/orderConfirmation",
+    "pages/withdraw/withdraw",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#EA5504",
+    "navigationBarTitleText": "主页",
+    "navigationBarTextStyle":"white"
   }
 }

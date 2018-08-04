@@ -1,3 +1,6 @@
+page {
+	font-family: 'SourceHanSansCN'
+}
 .lf {
 	float: left;
 }
@@ -24,4 +27,28 @@
 }
 .border-radius50 {
 	border-radius: 50%;
+}
+.border-radius20 {
+	border-radius: 20rpx;
+}
+.colorY {
+	color: #EA5504
+}
+.bgY {
+	background: #EA5504;
+}
+.colorF {
+	color: #fff;
+}
+.textCenter {
+	text-align: center;
+}
+.fontM {
+	font-weight: bold;
+}
+.alignCenter {
+	align-items: center;
+}
+.bgF {
+	background: #fff;
 }

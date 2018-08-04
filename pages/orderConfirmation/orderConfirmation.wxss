@@ -1,0 +1,55 @@
+/* pages/orderConfirmation/orderConfirmation.wxss */
+page {
+	background: #E5E5E4;
+}
+.top {
+	font-size:0;padding:27rpx 0 23rpx 12rpx;
+}
+.padding {
+	padding-left: 40rpx;padding-right: 46rpx;
+}
+.goods-cover {
+	width:284rpx;height: 175rpx;margin-right: 17rpx;
+}
+.top-text {
+	font-size:32rpx;color:#000;
+}
+.mt20 {
+	margin-top: 15rpx;
+}
+.contact-item {
+	color:#817E7E;font-size:30rpx;
+}
+.contact-box {
+	padding-top: 17rpx;padding-bottom: 30rpx;margin-top: 20rpx;
+}
+.right-icon {
+	width:16rpx;height: 27rpx;
+}
+.agree-text {
+	color:#000;font-size:24rpx;
+}
+.colorY {
+	font-size:30rpx;
+}
+.agree-box {
+	padding-top: 13rpx;padding-bottom: 19rpx;margin-top: 1px;
+}
+.coup {
+	font-size:32rpx;color:#000;padding-top: 16rpx;padding-bottom: 16rpx;margin-top: 20rpx;
+	margin-bottom: 20rpx;
+}
+.two-box {
+	 color:#0E0E0E;font-size:0;
+	padding-top: 20rpx;padding-bottom: 24rpx;
+}
+.coup-text {
+	font-size: 32rpx;
+}
+.mt {
+	margin-top: 10rpx;
+}
+.btn-box {
+	font-size:36rpx;height: 94rpx;line-height: 94rpx;
+	position: fixed;bottom:0;width:100%;
+}
