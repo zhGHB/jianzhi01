@@ -1,0 +1,30 @@
+
+<view class="box">
+	<!-- 搜索 -->
+	<view class="search-box flex bgF">
+		<view class="s-left flex alignCenter">
+			<text class="">日历</text>
+		</view>
+		<view class="flex1 alignCenter flex">
+			<input type="text" name="keyWords" class="search-input" placeholder="请输入关键字"/>
+		</view>
+		<view class="s-right flex alignCenter">
+			<text class="">客服</text>
+		</view>
+	</view>
+	<!-- 搜索 -->
+	<!-- 列表 -->
+	<view class="list-box bgF">
+		<view class="item flex flex-bettewn" wx:for="list">
+			<view>
+				<view class="item-name">国庆特别期】 色达净化之旅</view>
+				<view class="item-tag">[个人gvm]</view>
+				<view class="item-time">2018-10-11</view>
+			</view>
+			<view class="flex alignCenter">
+				<text>+0.00</text>
+			</view>
+		</view>
+	</view>
+	<!-- 列表 -->
+</view>

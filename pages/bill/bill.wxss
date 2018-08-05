@@ -1,0 +1,33 @@
+page {
+	background: #F5EFEF;
+}
+.search-box {
+	height: 90rpx;
+}
+.s-left,.s-right {
+	font-size:34rpx;color:#000;margin:0 30rpx;font-weight: 300
+}
+.search-input {
+	background: #DBD7D7;border-radius: 10rpx;width:100%;font-size:22rpx;padding-left: 20rpx;
+	color:#878585;
+}
+/*搜索*/
+.list-box {
+	margin-top: 13rpx;
+}
+.item {
+	border-bottom: 1px solid #666464;
+	padding:15rpx 40rpx;
+}
+.item:last-child {
+	border:none;
+}
+.item-name {
+	font-size:24rpx;color:#000;
+}
+.item-tag {
+	font-size:20rpx;color:#131313;margin:10rpx 0;
+}
+.item-time {
+	font-size:20rpx;color:#666464;
+}

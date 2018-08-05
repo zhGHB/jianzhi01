@@ -9,7 +9,7 @@
 }
 .pick-box {
 	position: fixed;
-	bottom: 0rpx;
+	bottom: -400rpx;
 	width:100%;height: 400rpx;
 	border:1px solid red;background: #fff;
 	transition: all 1s;
@@ -22,4 +22,15 @@
 }
 .confirm {
 	color:#EA5504;
+}
+.picker-style {
+	height: 300rpx;border:1px solid blue;text-align: center;
+}
+.picker-item {
+	font-size:28rpx;color:#000;
+}
+.item-text {
+	border-bottom: 1px solid #EA5504;
+	display: inline-block;
+	height: 50rpx;line-height: 50rpx;padding:0 40rpx;
 }
