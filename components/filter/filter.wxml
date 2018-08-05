@@ -1,0 +1,24 @@
+<!-- tab -->
+<view class="tab-box flex">
+	<view class="flex1 alignCenter flex-center flex active" bindtap="filter">
+		<text class="tab-text">所有活动</text>
+	</view>
+	<view class="flex1 alignCenter flex-center flex">
+		<text class="tab-text">城市</text>
+	</view>
+	<view class="flex1 alignCenter flex-center flex">
+		<text class="tab-text">活动天数</text>
+	</view>
+	<view class="flex1 alignCenter flex-center flex">
+		<text class="tab-text">排序</text>
+	</view>
+</view>
+<!-- tab -->
+<view class="pick-box {{pickActive?'active':''}}">
+	<view class="btn-box flex flex-bettewn">
+		<view>取消</view>
+		<view class="confirm">确认</view>
+	</view>
+	<view class="address-box pick-item-box">
+	</view>
+</view>

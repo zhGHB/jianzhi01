@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/activitySearch/activitySearch",
+    "components/filter/filter",
+    "pages/VIPInfo/VIPInfo",
+    "pages/setting/setting",
     "pages/myPurse/myPurse",
     "pages/addContact/addContact",
     "pages/myOrder/myOrder",

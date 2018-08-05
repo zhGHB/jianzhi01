@@ -1,0 +1,20 @@
+<view class="box">
+	<view class="top">
+		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="top-img"/>
+		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar"/>
+		<view class="text-left colorY nick-name ml">小小小小刺</view>
+		<view  class="text-left vip-count ml">会员号：66688</view>
+		<view class="text-left dis ml">这位小伙伴很懒，没作自我介绍</view>
+	</view>
+	<!-- 底部 -->
+	<view class="bottom-box">
+		<view class="hoby-title">TA的兴趣</view>
+		<view class="tag flex">
+			<view class='tag-item'>登山</view>
+			<view class='tag-item'>登山</view>
+			<view class='tag-item'>登山</view>
+			<view class='tag-item'>登山</view>
+		</view>
+	</view>
+	<!-- 底部 -->
+</view>

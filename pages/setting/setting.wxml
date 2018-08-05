@@ -1,0 +1,63 @@
+<view class="box">
+    <view class="top bgF flex">
+    	<view class="flex1">
+    		<view class="commen-font top-title">我的头像</view>
+    	</view>
+    	<view>
+    		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar border-radius50%"/>
+    	</view>
+	</view>
+	<!-- 头部结束 -->
+	<view class="item-box border-top">
+	   <view class="item flex flex-bettewn bgF">
+		  <view class="commen-font">昵称</view>
+		  <view class="commen-font">小小小小刺  </view>
+	   </view>
+    </view>
+    <view class="item-box border-top">
+	   <view class="item flex flex-bettewn bgF">
+		  <view class="commen-font">封面</view>
+		  <view class="commen-font flex alignCenter">
+		  	<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  </view>
+	   </view>
+    </view>
+    <view class="item-box border-top">
+	   <view class="item flex flex-bettewn bgF">
+		  <view class="commen-font">个人介绍</view>
+		  <view class="commen-font">在路上，不停歇</view>
+	   </view>
+    </view>
+    <view class="item-box border-top">
+	   <view class="item flex flex-bettewn bgF">
+		  <view class="commen-font">我的兴趣</view>
+		  <view class="commen-font flex alignCenter">
+		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  </view>
+	   </view>
+    </view>
+    <view class="item-box border-top">
+	   <view class="item flex flex-bettewn bgF">
+		  <view class="commen-font">新增常用人</view>
+		  <view class="commen-font flex alignCenter">
+		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  </view>
+	   </view>
+    </view>
+    <view class="item-box mt">
+	   <view class="item flex flex-bettewn bgF">
+		  <view class="commen-font">授权管理</view>
+		  <view class="commen-font flex alignCenter">
+		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  </view>
+	   </view>
+    </view>
+        <view class="item-box mt">
+    	   <view class="item flex flex-bettewn bgF">
+    		  <view class="commen-font">退出登录</view>
+    		 <view class="commen-font flex alignCenter">
+		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  </view>
+    	   </view>
+        </view>
+</view>
