@@ -1,0 +1,102 @@
+<view class="box">
+	<view class="top flex flex-bettewn bgF">
+		<view>
+			<view class="top-title">总资产（元）</view>
+			<view class="prcie colorB">¥ 0.00</view>
+		</view>
+		<view>
+			<view class="top-title">总资产（元）</view>
+			<view class="prcie colorY">¥ 0.00</view>
+		</view>
+	</view>
+	<!-- 列表 -->
+	<view class="item-box flex bgF">
+		<!-- 左侧 -->
+		<view class="flex1 border-right">
+			<view class="item">
+				<view class="item-title m">个人GMV</view>
+				<view class="flex m">
+					<view>
+						<view class="item-name">收入（元）</view>
+						<view class="item-num">¥ 0.00</view>
+					</view>
+					<view style="margin-left: 70rpx;">
+						<view class="item-name">活动数</view>
+						<view class="item-num">0</view>
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="item-title m">邀请领队</view>
+				<view class="flex m">
+					<view>
+						<view class="item-name">收入（元）</view>
+						<view class="item-num">¥ 0.00</view>
+					</view>
+					<view style="margin-left: 70rpx;">
+						<view class="item-name">活动数</view>
+						<view class="item-num">0</view>
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="item-title m">平台GMV </view>
+				<view class="flex m">
+					<view>
+						<view class="item-name">收入（元）</view>
+						<view class="item-num">¥ 0.00</view>
+					</view>
+					<view style="margin-left: 70rpx;">
+						<view class="item-name">活动数</view>
+						<view class="item-num">0</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 左侧 -->
+		<!-- 右侧 -->
+		<view class="flex1">
+			<view class="item">
+				<view class="item-title m">邀请会员 </view>
+				<view class="flex m">
+					<view>
+						<view class="item-name">收入（元）</view>
+						<view class="item-num">¥ 0.00</view>
+					</view>
+					<!-- <view style="margin-left: 70rpx;">
+						<view class="item-name">活动数</view>
+						<view class="item-num">0</view>
+					</view> -->
+				</view>
+			</view>
+			<view class="item">
+				<view class="item-title m">福利池（个人）  </view>
+				<view class="flex m">
+					<view>
+						<view class="item-name">收入（元）</view>
+						<view class="item-num">¥ 0.00</view>
+					</view>
+					<!-- <view style="margin-left: 70rpx;">
+						<view class="item-name">活动数</view>
+						<view class="item-num">0</view>
+					</view> -->
+				</view>
+			</view>
+			<view class="item">
+				<view class="item-title m">福利池（总）  </view>
+				<view class="flex m">
+					<view>
+						<view class="item-name">收入（元）</view>
+						<view class="item-num">¥ 0.00</view>
+					</view>
+					<!-- <view style="margin-left: 70rpx;">
+						<view class="item-name">活动数</view>
+						<view class="item-num">0</view>
+					</view> -->
+				</view>
+			</view>
+		</view>
+		<!-- 右侧 -->
+	</view>
+	<!-- 列表 -->
+</view>

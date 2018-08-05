@@ -1,0 +1,33 @@
+.top-title {
+	font-size:26rpx;color:#838282;
+}
+.prcie {
+	font-size:55rpx;
+}
+page {
+	background: #F5EFEF
+}
+.colorB {
+	color:#2B2B2A;
+}
+.top {
+	padding:20rpx 40rpx;
+}
+.item {
+	padding:20rpx 0;border-top: 1px solid #BFBFBF;
+}
+.item-title {
+	font-size:32rpx; color:#91908F;
+}
+.item-name {
+	font-size: 28rpx;color:#424141;margin-top: 20rpx;margin-bottom: 10rpx;
+}
+.item-num {
+	font-size:40rpx;color:#2B2B2A;
+}
+.m {
+	margin-left: 30rpx;
+}
+.border-right {
+	border-right: 1px solid #BFBFBF ;
+}

@@ -1,0 +1,19 @@
+<view class="box">
+	<view class="top bgY">
+		<view class="top-title">个人gVM(元)</view>
+		<view class="price textCenter colorF">626.<text class="float-text">00</text></view>
+		<view class="time textCenter colorF">2018.05.17-2019.05.17  </view>
+	</view>
+	<view class="status-box">
+		<view class="tip">离完成考核还差 4374 元</view>
+		<view class="p-box flex alignCenter">
+			<view class="progress bgG" style="width:40%"></view>
+			<text class="percent">40%</text>
+		</view>
+		<view class="tip">考核剩余 316 天</view>
+		<view class="p-box flex alignCenter">
+			<view class="progress bgY" style="width:46%"></view>
+			<text class="percent">46%</text>
+		</view>
+	</view>
+</view>

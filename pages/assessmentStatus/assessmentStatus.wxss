@@ -1,0 +1,36 @@
+.top-title {
+	color:#FAB995;
+	font-size:32rpx;margin-left: 32rpx;
+}
+.price {
+	font-size:120rpx;font-weight: bold;
+	height: 120rpx;line-height: 120rpx;margin-bottom: 22rpx;margin-top: 12rpx;
+}
+.float-text {
+	font-size:70rpx;
+}
+.time {
+	font-size: 32rpx;color:#FAD8C5;
+}
+.top {
+	font-size: 0;margin-top: 6rpx;padding-top: 32rpx;padding-bottom: 42rpx;
+}
+.tip {
+	font-size:32rpx;color:#474444;font-weight: bold;text-align: center;
+	margin: 20rpx 0;
+}
+.p-box {
+	height: 30rpx;border-radius: 15rpx;border:1px solid #0068B7;margin-left: 40rpx;margin-right: 40rpx;
+	position: relative;
+}
+.progress {
+	width:60%;margin:0 7rpx;border-radius: 9rpx;height: 18rpx;
+}
+.bgG {
+	background: #00FFFF;
+}
+.percent {
+	position: absolute;
+	height: 30rpx;line-height: 30rpx;
+	font-size:20rpx;color:#e5e5e5;right: 6rpx;top:0;
+}
