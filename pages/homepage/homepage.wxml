@@ -1,0 +1,27 @@
+<view class="box">
+	<view class="top flex flex-bettewn">
+		<view class="flex alignCenter">
+			<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar border-radius50"/>
+			<view>
+				<view class="nick-name colorY">小小小小刺</view>
+				<view class="vip-count colorY">会员号：88866</view>
+				<view class="flex">
+					<view class="tag">已关注</view>
+					<view class="tag">分享</view>
+				</view>
+			</view>	
+		</view>
+		<view class="flex flex-center flex-column">
+			<view class="flex alignCenter ">
+				<view class="address">成都市</view>
+			</view>
+			<view class="visit-num">访问量：194</view>
+		</view>
+
+	</view>
+	<!-- tab -->
+	<view class="tab-box">
+		
+	</view>
+	<!-- tab -->
+</view>

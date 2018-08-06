@@ -1,0 +1,27 @@
+.avatar {
+	width:166rpx;height: 166rpx;margin-right: 17rpx;
+}
+.nick-name {
+	font-size:32rpx;font-weight: bold;
+}
+.vip-count {
+	font-size:20rpx;font-weight: 100;
+}
+.tag {
+	font-size:20rpx;color:#7D7D7D;border:1px solid #7D7D7D;border-radius: 4rpx;
+	margin-top: 16rpx;margin-right: 8rpx;padding:8rpx;
+}
+.address,.visit-num {
+	font-size:20rpx;color:#878787;
+	text-align: right;
+	width:100%;
+}
+.top {
+	padding:26rpx 50rpx;
+}
+/*tab*/
+.tab-box {
+	border-top: 2rpx solid #878787;border-bottom: 2rpx solid #878787;
+	height: 110rpx;
+}
+/*tab*/

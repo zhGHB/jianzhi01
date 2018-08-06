@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/homepage/homepage",
     "pages/totalAssets/totalAssets",
     "pages/assessmentStatus/assessmentStatus",
     "pages/mine/mine",
