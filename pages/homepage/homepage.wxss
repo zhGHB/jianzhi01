@@ -24,4 +24,17 @@
 	border-top: 2rpx solid #878787;border-bottom: 2rpx solid #878787;
 	height: 110rpx;
 }
+.tab-item {
+	font-size:24rpx;color:#5E5D5D;border-right: 1px solid #878787;height:68rpx;
+}
+.tab-item:last-child {
+	border:none;
+}
+.textCenter {
+	font-size:34rpx;
+}
+.tab-num {
+	font-size:36rpx;color:#8B8888;
+	font-weight: bold;
+}
 /*tab*/

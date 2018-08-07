@@ -20,7 +20,26 @@
 
 	</view>
 	<!-- tab -->
-	<view class="tab-box">
+	<view class="tab-box flex alignCenter">
+		<view class="tab-item textCenter flex1 flex alignCenter flex-center">
+			<text class="colorY">主页</text>
+		</view>	
+		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
+			<view>分享</view>
+			<view class="tab-num">8</view>
+		</view>
+		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
+			<view>活动</view>
+			<view class="tab-num">8</view>
+		</view>
+		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
+			<view>粉丝</view>
+			<view class="tab-num">8</view>
+		</view>
+		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
+			<view>评论</view>
+			<view class="tab-num">8</view>
+		</view>
 		
 	</view>
 	<!-- tab -->
