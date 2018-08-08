@@ -1,0 +1,40 @@
+<view class="box bgF">
+    <view class="top flex flex-bettewn">
+        <view class="flex alignCenter flex1">
+            <image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar" />
+            <view>
+                <view class="top-name">小小刺</view>
+                <view class="top-time">2018年5月21日 12:29 </view>
+            </view>
+        </view>
+        <view class="flex alignCenter">
+            <view class="top-btn">
+                + 关注
+            </view>
+        </view>
+    </view>
+    <view class="title">贡嘎全线穿越成功 </view>
+    <image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="cover" />
+</view>
+<view class="box bgF">
+	<view class="flex alignCenter">
+		<image src="../../images/heart-red.png" class="heart"/>
+		<text class="colorY heart-num">4</text>
+		 <image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="small-avatar" />
+	</view>
+	<view class="rate-title">评论</view>
+	<view class="rate-item" wx:for="[1]">
+		<view class="flex alignCenter">
+			<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="rate-item-avatar" />
+			<view class="flex1 flex flex-bettewn">
+				<view class="rate-item-name colorY">emma:</view>
+				<view class="rate-item-time colorY">2018年5月21日  12:29</view>
+			</view>
+		</view>
+		<view class="rate-dis">完全找不到我自己</view>
+	</view>
+</view>
+<view class="flex alignCenter send-box bgF">
+	<input type="text" name="" class="flex1 send-input" value="型录" />
+	<view class="send-btn colorF bgY">发送</view>
+</view>

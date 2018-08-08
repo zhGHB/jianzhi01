@@ -1,0 +1,22 @@
+<view class="item  bgF" wx:for="[1,2]">
+    <view class="flex flex-bettewn">
+        <view class="item-left">
+            <view class="name">色达净化之旅</view>
+            <view class="dis">领队：小小刺</view>
+            <view class="dis">活动时间：2018.06.29-07.0</view>
+            <view class="dis">报名状态：报名中</view>
+            <view class="dis">报名人数：第一组20/20 第二组8/20</view>
+        </view>
+        <view class="flex alignCenter item-right">
+            <view class="colorF bgY btn">点评邀请</view>
+        </view>
+    </view>
+    <view class="item-bottom flex">
+    	<view class="bottom-item flex1">
+    		<text class="item-bottom-text">名单</text>
+    	</view>
+    	<view class="bottom-item flex1">
+    		<text class="item-bottom-text">名单</text>
+    	</view>
+    </view>
+</view>

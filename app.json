@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/rate/rate",
+    "pages/activeManage/activeManage",
     "pages/homepage/homepage",
     "pages/totalAssets/totalAssets",
     "pages/assessmentStatus/assessmentStatus",

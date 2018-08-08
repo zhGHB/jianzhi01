@@ -1,0 +1,30 @@
+page {
+	background: #F5EFEF;
+}
+.name {
+	font-size:30rpx;color:#000;
+}
+.dis {
+	color:#6E6B6B;font-size:22rpx;
+}
+.btn {
+	font-size:22rpx;font-weight: 100;border-radius: 5rpx;
+	padding:13rpx 20rpx;
+}
+.item-left {
+	margin-left: 34rpx;
+}
+.item-right {
+	margin-right:33rpx;
+}
+.item {
+	margin:20rpx;padding-top: 24rpx;
+}
+.bottom-item {
+	font-size:26rpx;color:#000;font-weight: 100;text-align: center;
+	height: 45rpx;line-height: 45rpx;border-top: 1px solid #D1CFCF;
+	margin-top: 10rpx;
+}
+.bottom-item:first-child {
+	border-right: 1px solid #D1CFCF;
+}

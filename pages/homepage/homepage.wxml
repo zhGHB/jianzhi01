@@ -1,46 +1,63 @@
 <view class="box">
-	<view class="top flex flex-bettewn">
-		<view class="flex alignCenter">
-			<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar border-radius50"/>
-			<view>
-				<view class="nick-name colorY">小小小小刺</view>
-				<view class="vip-count colorY">会员号：88866</view>
-				<view class="flex">
-					<view class="tag">已关注</view>
-					<view class="tag">分享</view>
-				</view>
-			</view>	
-		</view>
-		<view class="flex flex-center flex-column">
-			<view class="flex alignCenter ">
-				<view class="address">成都市</view>
-			</view>
-			<view class="visit-num">访问量：194</view>
-		</view>
-
-	</view>
-	<!-- tab -->
-	<view class="tab-box flex alignCenter">
-		<view class="tab-item textCenter flex1 flex alignCenter flex-center">
-			<text class="colorY">主页</text>
-		</view>	
-		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
-			<view>分享</view>
-			<view class="tab-num">8</view>
-		</view>
-		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
-			<view>活动</view>
-			<view class="tab-num">8</view>
-		</view>
-		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
-			<view>粉丝</view>
-			<view class="tab-num">8</view>
-		</view>
-		<view class="tab-item flex flex-center alignCenter flex1 flex-column">
-			<view>评论</view>
-			<view class="tab-num">8</view>
-		</view>
-		
-	</view>
-	<!-- tab -->
+    <view class="top flex flex-bettewn">
+        <view class="flex alignCenter">
+            <image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar border-radius50" />
+            <view>
+                <view class="nick-name colorY">小小小小刺</view>
+                <view class="vip-count colorY">会员号：88866</view>
+                <view class="flex">
+                    <view class="tag">已关注</view>
+                    <view class="tag">分享</view>
+                </view>
+            </view>
+        </view>
+        <view class="flex flex-center flex-column">
+            <view class="flex alignCenter ">
+                <view class="address">成都市</view>
+            </view>
+            <view class="visit-num">访问量：194</view>
+        </view>
+    </view>
+    <!-- tab -->
+    <view class="tab-box flex alignCenter">
+        <view class="tab-item textCenter flex1 flex alignCenter flex-center">
+            <text class="colorY">主页</text>
+        </view>
+        <view class="tab-item flex flex-center alignCenter flex1 flex-column">
+            <view>分享</view>
+            <view class="tab-num">8</view>
+        </view>
+        <view class="tab-item flex flex-center alignCenter flex1 flex-column">
+            <view>活动</view>
+            <view class="tab-num">8</view>
+        </view>
+        <view class="tab-item flex flex-center alignCenter flex1 flex-column">
+            <view>粉丝</view>
+            <view class="tab-num">8</view>
+        </view>
+        <view class="tab-item flex flex-center alignCenter flex1 flex-column">
+            <view>评论</view>
+            <view class="tab-num">8</view>
+        </view>
+    </view>
+    <!-- tab -->
+    <view class="content">
+        <!-- 粉丝 -->
+        <scroll-view  scroll-y class="scroll">
+            <view class="fans-box">
+                <view class="fans-item flex" wx:for="[1,3,3]">
+                    <view class="flex alignCenter">
+                        <image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="fans-avatar" />
+                    </view>
+                    <view class="flex flex-column flex-center">
+                        <view class="fans-name">
+                            小小小
+                        </view>
+                        <view class="fans-dis">努力活成自己最喜欢的样子 </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <!-- 粉丝 -->
+    </view>
 </view>
