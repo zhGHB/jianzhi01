@@ -1,0 +1,54 @@
+
+<view class="box">
+	<view class="input-box flex alignCenter">
+		<input class="search-input flex1" placeholder="搜索 领队网名/会员号"/>
+	</view>
+	<!-- 内容 -->
+	<view class="item flex" wx:for="list">
+		<view class="item-left flex alignCenter">
+			<image src="../../images/1.png" class="one"/>
+		</view>
+		<!-- 左边 -->
+		<view class="item-right flex1">
+			<!-- 顶部 -->
+			<view class="item-top flex alignCenter" >
+				<view class="flex alignCenter flex1">
+					<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar"/>
+					<view class="flex1">
+						<view class="item-name">小小刺</view>
+						<view class="item-dis">活动2 分享:8 粉丝:36</view>
+					</view>
+				</view>
+				<view>
+					<view class="watch-btn">+ 关注</view>
+				</view>
+			</view>
+			<!-- 顶部 -->
+			<!-- 底部 -->
+			<view class="item-bottom">
+				<view class="ii-item flex flex-bettewn">
+					<view>
+						<view class="ii-title">【端午特别期】<text class="ii-text">色达净化之旅</text></view>
+						<view class="ii-dis">成都集中 | 6.16-24</view>
+					</view>
+					<view class="flex alignCenter">
+						<view class="book-btn {{index%2==0?'book-active':'book-un-active'}}">报名中</view>
+					</view>
+				</view>
+				<view class="ii-item flex flex-bettewn">
+					<view>
+						<view class="ii-title">【端午特别期】<text class="ii-text">色达净化之旅</text></view>
+						<view class="ii-dis">成都集中 | 6.16-24</view>
+					</view>
+					<view class="flex alignCenter">
+						<view class="book-btn {{index%2==0?'book-active':'book-un-active'}}">报名中</view>
+					</view>
+				</view>
+			</view>
+
+			<!-- 底部 -->
+		</view>
+		<!-- 左边 -->
+	</view>
+	<!-- 内容 -->
+</view>

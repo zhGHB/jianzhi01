@@ -1,0 +1,32 @@
+<view class="box">
+	<view class="active-top bgF flex flex-column alignCenter">
+		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="active-avatar"/>
+		<veiw class="active-top-title"><text>【端午特别期】</text><text></text>2018.5.1-7</veiw>
+	</view>
+	<view class="active-content bgF">
+		<view class="active-content-title">请给领队点评</view>
+		<view class="active-star-img flex alignCenter flex-center">
+			<image src="../../images/star-active.png" class="active-star-icon"/>
+			<image src="../../images/star-active.png" class="active-star-icon"/>
+			<image src="../../images/star-active.png" class="active-star-icon"/>
+			<image src="../../images/star.png" class="active-star-icon"/>
+			<image src="../../images/star.png" class="active-star-icon"/>
+		</view>
+		<!-- 标签 -->
+		<view class="active-tag-box">
+			<view class="active-tab">
+			</view>
+		</view>
+		<!-- 标签 -->
+		<!-- 按钮 -->
+		<view class="active-textarea-box">
+			<textarea class="active-textarea" value="写下你的活动体验，你的建议很重要！！！">
+				
+			</textarea>
+		</view>
+		<view class="active-btn colorF bgY">
+			确认发表
+		</view>
+		<!-- 按钮 -->
+	</view>
+</view>

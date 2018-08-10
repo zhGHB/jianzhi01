@@ -1,5 +1,10 @@
 {
   "pages":[
+    "pages/leader/leader",
+    "pages/customMade/customMade",
+    "pages/share/share",
+    "pages/activeRate/activeRate",
+    
     "pages/rate/rate",
     "pages/activeManage/activeManage",
     "pages/homepage/homepage",

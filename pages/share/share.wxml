@@ -1,0 +1,50 @@
+<view class="box">
+	<view class="tab flex alignCenter bgF">
+		<veiw class="flex1 tab-item">
+			<text class="tab-text active">分享圈</text>
+		</veiw>	
+		<veiw class="flex1 tab-item">
+			<text class="tab-text">已关注</text>
+		</veiw>
+	</view>
+	<!-- 内容 -->
+	<view class="share-box">
+		<view class="circle-item item bgF" wx:for="list">
+			<!-- 头部 -->
+			<viwe class="circle-item-top flex flex-bettewn">
+				<view class="flex alignCenter">
+					<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-avatar"/>	
+					<view>
+						<view class="share-name">小小刺</view>
+						<view class="share-time">2018年5月21</view>
+					</view>
+				</view>
+				<view class="flex alignCenter">
+					<view class="watch-btn colorY">+ 关注</view>
+				</view>
+			</viwe>
+			<!-- 头部 -->
+			<view class="share-title">贡嘎全线穿越成功 </view>
+			<!-- 四张加share-img-box -->
+			<view class="">
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>	
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
+			</view>
+			<!-- 底部 -->
+			<view class="share-bottom flex alignCenter">
+				<view class="flex flex-center alignCenter flex1">
+					<image src="../../images/message.png"  class="share-message"/><text class="colorY" style="margin-left: 10rpx;">4</text>
+				</view>
+				<view class="flex flex-center alignCenter flex1">
+					<image src="../../images/heart1.png"  class="share-heart"/><text class="colorY" style="margin-left: 10rpx;">4</text>
+				</view>
+			</view>
+			<!-- 底部 -->
+		</view>
+	</view>
+	<!-- 内容 -->
+</view>

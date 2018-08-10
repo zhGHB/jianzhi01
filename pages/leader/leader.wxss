@@ -1,0 +1,59 @@
+/* pages/leader/leader.wxss */
+.input-box {
+	background: #D65007;
+	height:80rpx;padding:20rpx;
+}
+.search-input {
+	background: #fff;border-radius: 10rpx;height: 53rpx;text-align: center;
+	font-size: 24rpx;color:#919191;padding:0 10rpx;
+}
+.one {
+	width:56rpx;height: 54rpx;
+}
+.avatar {
+	width:105rpx;height: 105rpx;border-radius: 50%;margin-right: 10rpx; 
+}
+.item-name {
+	font-size:32rpx;color:#000;
+}
+.item-dis {
+	font-size:24rpx;color:#5E5D5D;
+}
+.watch-btn {
+	color:#EA5504;font-size:24rpx;border:1px solid red;
+}
+.item-left {
+	margin-left: 44rpx;margin-right: 10rpx;height: 106rpx;
+}
+.item {
+	/*border:1px solid red;*/
+	margin-top: 10rpx;
+}
+.item-right {
+	/*border:1px solid blue;*/
+	margin-right: 20rpx;
+}
+.ii-title {
+	font-size:26rpx;color:#000;
+}
+.ii-text {
+	font-size:26rpx;font-weight: 100;color:#000;
+}
+.ii-dis {
+	font-size:20rpx;color:#000;
+}
+.book-btn {
+	border-radius: 4rpx;font-size:20rpx;padding:10rpx;
+}
+.book-active {
+	background: #EA5504;color:#FCFCFC;
+}
+.book-un-active {
+	color:#FCFCFC;background: #7C3F8D;
+}
+.item-bottom {
+
+}
+.ii-item {
+	background: #EEE4DE;padding:0 20rpx;margin-top: 10rpx;
+}

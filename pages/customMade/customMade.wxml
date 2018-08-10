@@ -1,0 +1,8 @@
+<view class="box">
+	<image src="../../images/customMade.png" class="customMade"/>
+	<view class="customMade-title colorY">定制，一个电话就解决的事</view>
+	<image src="../../images/bg.jpg" class="steam"/>
+	<view class="contact">电话：1334 880 1334 / 152 028 44988 </view>
+	<view class="contact">微信：1334 880 1334 / 152 028 449</view>
+	<view class="contact">邮箱：1334 880 1334</view>
+</view>

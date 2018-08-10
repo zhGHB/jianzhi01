@@ -1,0 +1,58 @@
+/* pages/share/share.wxss */
+page {
+	background: #F5EFEF;
+} 
+.tab {
+	height: 80rpx;
+}
+.tab-item {
+	text-align: center;
+}
+.tab-text {
+	font-size:36rpx;color:#595656;	
+}
+.active {
+	border-bottom: 4rpx solid #EA5504;color:#EA5504;
+}
+
+.share-box {
+	margin-top: 27rpx;margin-left: 23rpx;margin-right: 23rpx;
+}
+.share-avatar {
+	width:90rpx;height: 90rpx;border-radius: 50%;margin-right: 14rpx;
+}
+.share-name {
+	font-size: 30rpx;color:#000;
+}
+.share-time {
+	color:#A0A0A0;font-size:24rpx;
+}
+.watch-btn {
+	border:1px solid #EA5504;border-radius: 4rpx;font-size:24rpx;padding:10rpx;
+}
+.item {
+	padding:20rpx;margin-bottom: 12rpx;
+}
+.share-title {
+	font-size:30rpx;color:#000;margin-top: 28rpx;margin-bottom: 12rpx;
+}
+
+
+/*图片*/
+.share-img01 {
+	width:100%;height: 363rpx;
+}
+.share-img02 {
+	width:210rpx;height: 208rpx;margin-right: 10rpx;
+}
+.share-img-box {
+	width:440rpx;
+}
+/*图片*/
+
+.share-message {
+	width:39rpx;height: 33rpx;
+}
+.share-heart {
+	width:33rpx;height: 29rpx;
+}
