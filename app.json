@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/eventDetails/eventDetails",
+    "pages/myCollection/myCollection",
     "pages/leader/leader",
     "pages/customMade/customMade",
     "pages/share/share",

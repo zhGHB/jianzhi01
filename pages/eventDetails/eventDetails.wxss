@@ -1,0 +1,227 @@
+
+page {
+	padding-bottom: 120rpx;
+}
+.slide-image {
+	width:100%;height: 465rpx;
+}
+.swiper-item {
+	height: 465rpx;
+}
+.swiper {
+	height: 465rpx;
+}
+.active-name {
+	font-size:34rpx;color:#000;
+}
+.sub-active-name {
+	font-size:30rpx;
+}
+.active-price,.morming-price {
+	font-size:24rpx;color:#000;
+}
+.morming-price-num {
+	color:red;
+}
+.dis-box {
+	padding:20rpx;border-bottom: 20rpx solid #ccc;
+}
+.star {
+	width:21rpx;height: 21rpx;margin-right: 10rpx;
+}
+.grade-text {
+	font-size:20rpx;
+}
+.go-num-text {
+	font-size:24rpx;
+}
+.collect-btn {
+	border-radius: 4rpx;padding:5rpx 10rpx;margin-left: 130rpx;
+}
+.book-title {
+	font-size:24rpx;color:#000;
+}
+.book-sub-title {
+	color:#ccc;
+}
+.book-list-box {
+	padding:20rpx;
+}
+.book-list-item {
+	border-bottom: 1px solid #B3B3B3;
+}
+.borderY {
+	border-bottom: 4rpx solid #EA5504;
+}
+.mr {
+
+}
+.man {
+	width:60rpx;text-align: center;color:red;
+}
+.scroll {
+	border:1px solid red;height: 180rpx;width:100%;white-space:nowrap;overflow: auto;
+}
+
+.scroll-img {
+	width:116rpx;height: 116rpx;border-radius: 50%;margin-right: 10rpx;display: inline-block;
+}
+.flexa{
+	width:3000rpx;
+}
+
+/*活动*/
+.active-title {
+	font-size:34rpx;color:#000;margin-bottom: 20rpx;
+}
+.big-btn-time {
+	font-size:22rpx;color:#141414;text-align: center;
+}
+.big-btn-text {
+	font-size:28rpx;color:#141414;text-align: center;
+}
+.bgG {
+	background: #A0A0A0;
+}
+.bgY {
+	 border-radius: 5rpx;
+}
+.active-big-btn {
+	border-radius: 5rpx;border:4rpx solid #EA5504;
+}
+.active-big-btn:last-child {
+	border:4rpx solid #A0A0A0;border-radius: 5rpx;margin-left: 20rpx;
+}
+.active-content {
+	margin:15rpx;border-radius: 5rpx;padding-top: 16rpx;padding-bottom: 16rpx;
+}
+.acitve-time-box {
+	margin:20rpx;
+}
+.address-icon {
+	width:25rpx;height: 30rpx;margin-right: 14rpx;
+}
+.address-text {
+	font-size:30rpx;
+}
+.line-text {
+	font-size:20rpx;color:#000;line-height: 30rpx;
+}
+.active-address-box {
+	margin-top: 16rpx;
+}
+/*活动*/
+
+/*tab*/
+.tab-item {
+	text-align: center;font-size:34rpx; color:#090909;border-bottom: 3rpx solid #A0A0A0;
+	padding-bottom: 14rpx;
+}
+.tab-box {
+	border-top: 10rpx solid #A0A0A0;margin-bottom: 20rpx;
+	padding-top: 22rpx;
+}
+.tab-item.active {
+	color:#ED712D;border-bottom: 3rpx solid #ED712D;
+}
+.rate-star-icon {
+	width:34rpx;height: 34rpx;
+}
+.rate-num-text {
+	font-size:83rpx;color:#4A4949;border-right: 4rpx solid #000000;
+	height: 106rpx;line-height: 106rpx;padding-right: 65rpx;padding-left: 145rpx;
+}
+.rate-p {
+	font-size:20rpx;color:#000;
+	border:1px solid red;
+}
+.rate-star-box {
+	text-align: center;
+}
+.rate-num-box {
+	height: 150rpx;border-bottom: 1px solid #A0A0A0;
+}
+
+/*tab*/
+
+/*评论*/
+.rate-avatar {
+	width:116rpx;height: 116rpx;border-radius: 50%;margin-right: 20rpx;
+}
+.rate-name {
+	font-size:28rpx;color:#000;
+}
+.rate-time {
+	color:#A0A0A0;font-size:24rpx;
+}
+.rate-list {
+	padding-top:20rpx;padding-left: 40rpx;padding-right: 40rpx;
+}
+.rate-aside {
+	font-size:20rpx;color:#A0A0A0;font-weight: 100;margin-top: 15rpx;
+}
+.tag-btn {
+	font-size:20rpx;border-radius: 6rpx;margin-right: 10rpx;padding:10rpx;
+}
+.tag-dis {
+	color:#212020;font-size:30rpx;
+}
+/*评论*/
+
+/*推荐活动*/
+.activeRe-img {
+	width:222rpx;height: 133rpx;margin-right: 20rpx;
+}
+.activeRe-name {
+	font-size:30rpx;color:#050505;
+}
+.activeRe-time {
+	font-size:24rpx;color:#050505;
+}
+.activityRe-item {
+	margin-left:20rpx;border-bottom: 4rpx solid #ccc;padding-top:20rpx;
+	padding-bottom:20rpx;margin-right: 20rpx;
+}
+.activityRe-title {
+	padding-left: 20rpx;
+}
+.activityRe-box {
+	border-top: 10rpx solid #ccc;padding-top: 10rpx;margin-top: 10rpx;
+}
+/*推荐活动*/
+
+
+/*活动详情*/
+.acitve-detail-banner {
+	width:100%;height: 400rpx;margin-top: 20rpx;
+}
+.active-detail-dis {
+	font-size:30rpx;color:#050505;margin-left: 20rpx;
+}
+.active-detail-dis-box {
+	margin-top: 20rpx;margin-bottom: 20rpx;
+}
+/*活动详情*/
+
+/*底部按钮*/
+.bottom-btn-icon {
+	width:48rpx;height: 48rpx;
+}
+.bottom-btn-text {
+	color:#A0A0A0;font-size:26rpx;
+}
+.bottom-btn-item {
+	text-align: center;padding:0 20rpx;
+}
+.bottom-btn-box {
+	position: fixed;
+	bottom:0;width:100%;
+	background: #fff;height: 110rpx;
+}
+.bottom-right {
+	height: 110rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;margin-left: 20rpx;
+}
+/*底部按钮

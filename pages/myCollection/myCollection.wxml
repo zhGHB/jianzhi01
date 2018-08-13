@@ -1,0 +1,13 @@
+<view class="box bgF">
+	<view>
+		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="goods-cover"/>	
+	</view>
+	<view class="title">端午特别期】<text class="sub-title">色达净化之旅</text></view>
+	<view class="price">早鸟价：¥2880</view>
+	<view class="btn-box colorF bgY flex alignCenter">
+		<view class="flex1 textCenter">立即报名</view>
+		<view class="delete-box flex flex-center">
+			<image src="../../images/delete-icon.png" class="delete-icon"/>
+		</view>
+	</view>
+</view>
