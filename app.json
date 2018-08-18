@@ -1,35 +1,71 @@
 {
-  "pages":[
-    "pages/eventDetails/eventDetails",
-    "pages/myCollection/myCollection",
-    "pages/leader/leader",
-    "pages/customMade/customMade",
-    "pages/share/share",
-    "pages/activeRate/activeRate",
-    
-    "pages/rate/rate",
-    "pages/activeManage/activeManage",
-    "pages/homepage/homepage",
-    "pages/totalAssets/totalAssets",
-    "pages/assessmentStatus/assessmentStatus",
-    "pages/mine/mine",
-    "pages/bill/bill",
-    "pages/activitySearch/activitySearch",
-    "components/filter/filter",
-    "pages/VIPInfo/VIPInfo",
-    "pages/setting/setting",
-    "pages/myPurse/myPurse",
-    "pages/addContact/addContact",
-    "pages/myOrder/myOrder",
-    "pages/orderConfirmation/orderConfirmation",
-    "pages/withdraw/withdraw",
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#EA5504",
-    "navigationBarTitleText": "主页",
-    "navigationBarTextStyle":"white"
-  }
+    "pages": [
+      
+        "pages/activey/activey",
+        "pages/index/index",
+        "pages/myCollection/myCollection",
+        "pages/eventDetails/eventDetails",
+        "pages/leader/leader",
+        "pages/customMade/customMade",
+        "pages/share/share",
+        "pages/activeRate/activeRate",
+        "pages/nameList/nameList",
+        "pages/rate/rate",
+        "pages/activeManage/activeManage",
+        "pages/homepage/homepage",
+        "pages/totalAssets/totalAssets",
+        "pages/assessmentStatus/assessmentStatus",
+        "pages/mine/mine",
+        "pages/bill/bill",
+        "pages/activitySearch/activitySearch",
+        "components/filter/filter",
+        "components/search/search",
+        "pages/VIPInfo/VIPInfo",
+        "pages/setting/setting",
+        "pages/myPurse/myPurse",
+        "pages/addContact/addContact",
+        "pages/myOrder/myOrder",
+        "pages/orderConfirmation/orderConfirmation",
+        "pages/withdraw/withdraw",
+
+        "pages/logs/logs"
+    ],
+    "window":
+    {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#EA5504",
+        "navigationBarTitleText": "主页",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar":
+    {
+        "color": "#ccc",
+        "selectedColor": "#EA5504",
+        "borderStyle": "white",
+        "list": [
+        {
+            "selectedIconPath": "images/activity-chosen.png",
+            "iconPath": "images/activity.png",
+            "pagePath": "pages/activey/activey",
+            "text": "活动"
+        },
+        {
+            "selectedIconPath": "images/share1-chosen.png",
+            "iconPath": "images/share1.png",
+            "pagePath": "pages/share/share",
+            "text": "分享"
+        },
+        {
+            "selectedIconPath": "images/leader-chosen.png",
+            "iconPath": "images/leader.png",
+            "pagePath": "pages/leader/leader",
+            "text": "领队"
+        },
+        {
+            "selectedIconPath": "images/mine-chosen.png",
+            "iconPath": "images/mine.png",
+            "pagePath": "pages/mine/mine",
+            "text": "我的"
+        }]
+    }
 }

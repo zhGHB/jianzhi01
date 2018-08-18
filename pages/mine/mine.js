@@ -6,11 +6,11 @@ Page({
    */
   data: {
      item: [
-        {name:'我的订单',path:'',iconUrl:''},
-        {name:'我的收藏',path:'',iconUrl:''},
-        {name:'设置',path:'',iconUrl:''},
-        {name:'我的钱包',path:'',iconUrl:''},
-        {name:'联系客服',path:'',iconUrl:''},
+        {name:'我的订单',path:'../myOrder/myOrder',iconUrl:''},
+        {name:'我的收藏',path:'../myCollection/myCollection',iconUrl:''},
+        {name:'设置',path:'../setting/setting',iconUrl:''},
+        {name:'我的钱包',path:'../myPurse/myPurse',iconUrl:''},
+        {name:'联系客服',path:'../customMade/customMade',iconUrl:''},
         {name:'帮助中心',path:'',iconUrl:''},
         {name:'关于我们',path:'',iconUrl:''},
         {name:'领队工作台',path:'',iconUrl:''},
@@ -24,7 +24,12 @@ Page({
   onLoad: function (options) {
   
   },
-
+  goDetail(e) {
+    let path = e.currentTarget.dataset.path;
+    wx.navigateTo({
+     url:path,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

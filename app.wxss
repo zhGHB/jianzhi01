@@ -63,5 +63,8 @@ page {
 .go-right-icon {
 	width:16rpx;height: 27rpx;
 }
+.block {
+	display: block;
+}
 
 

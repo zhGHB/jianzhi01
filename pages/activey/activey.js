@@ -1,16 +1,28 @@
-// pages/share/share.js
+// pages/activey/activey.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [1,2,3,4],
-    tabs: [
-      {name:'分享圈',id: 0},
-      {name: '已关注', id: 1}
+    imgUrls: [
+        'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+        'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
     ],
-    tabIndex: 0
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    tabs:[
+      {name: '推荐',id: 0},
+      {name: '周边',id: 1},
+      {name: '长线',id: 2},
+      {name: '节假日',id: 3},
+      {name: '定制',id: 4}
+    ],
+    tabIndex: 0,
+    list:[1,1,1,1,1,1,1,1,1,11,2,2]
   },
 
   /**
@@ -19,15 +31,19 @@ Page({
   onLoad: function (options) {
   
   },
-  changeTab(e) {
-    let id = e.target.id;
-    this.setData({tabIndex: parseInt(id)})
-  },
-  goDetail() {
-    wx.navigateTo({
-     url:'../rate/rate',
+  changeTag(e) {
+    let id = e.currentTarget.dataset.id;
+    this.setData({
+      tabIndex: id
     })
   },
+  // 详情
+  goDetail() {
+    wx.navigateTo({
+     url:'../eventDetails/eventDetails',
+    })
+  },
+  // 详情
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

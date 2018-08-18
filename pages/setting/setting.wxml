@@ -18,7 +18,7 @@
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">封面</view>
 		  <view class="commen-font flex alignCenter">
-		  	<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  	<image src="../../images/arrow-right.png" class="go-right-icon"/>
 		  </view>
 	   </view>
     </view>
@@ -32,7 +32,7 @@
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">我的兴趣</view>
 		  <view class="commen-font flex alignCenter">
-		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  		<image src="../../images/arrow-right.png" class="go-right-icon"/>
 		  </view>
 	   </view>
     </view>
@@ -40,7 +40,7 @@
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">新增常用人</view>
 		  <view class="commen-font flex alignCenter">
-		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  		<image src="../../images/arrow-right.png" class="go-right-icon"/>
 		  </view>
 	   </view>
     </view>
@@ -48,7 +48,7 @@
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">授权管理</view>
 		  <view class="commen-font flex alignCenter">
-		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  		<image src="../../images/arrow-right.png" class="go-right-icon"/>
 		  </view>
 	   </view>
     </view>
@@ -56,7 +56,7 @@
     	   <view class="item flex flex-bettewn bgF">
     		  <view class="commen-font">退出登录</view>
     		 <view class="commen-font flex alignCenter">
-		  		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="go-right-icon"/>
+		  		<image src="../../images/arrow-right.png" class="go-right-icon"/>
 		  </view>
     	   </view>
         </view>

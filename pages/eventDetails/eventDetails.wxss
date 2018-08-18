@@ -60,16 +60,23 @@ page {
 	width:60rpx;text-align: center;color:red;
 }
 .scroll {
-	border:1px solid red;height: 180rpx;width:100%;white-space:nowrap;overflow: auto;
+	height: 180rpx;width:100%;white-space:nowrap;overflow: auto;
 }
-
+.line {
+	border:1px solid #ccc;
+}
+.scroll-box {
+	display: flex;margin-top: 20rpx;
+}
 .scroll-img {
 	width:116rpx;height: 116rpx;border-radius: 50%;margin-right: 10rpx;display: inline-block;
 }
 .flexa{
-	width:3000rpx;
+	width:116rpx;margin-right: 10rpx;
 }
-
+.flex-name {
+	font-size:30rpx; text-align: center;
+}
 /*活动*/
 .active-title {
 	font-size:34rpx;color:#000;margin-bottom: 20rpx;
@@ -133,7 +140,6 @@ page {
 }
 .rate-p {
 	font-size:20rpx;color:#000;
-	border:1px solid red;
 }
 .rate-star-box {
 	text-align: center;
@@ -225,3 +231,30 @@ page {
 	justify-content: center;margin-left: 20rpx;
 }
 /*底部按钮
+
+/*弹出层*/
+ 
+ .mask {
+ 	position: fixed;
+ 	top:0;right: 0;left: 0;bottom: 0;
+ 	background: rgba(0,0,0,0.5);
+ 	display: none;
+ }
+.mask-content {
+	border-radius: 10rpx;
+	margin:0 100rpx;padding:30rpx 30rpx 20rpx 30rpx;
+}
+.tip {
+	font-size:30rpx;color:#A0A0A0;
+}
+.m-btn {
+	font-size:28rpx;padding: 10rpx 20rpx;border-radius: 8rpx;margin-top: 30rpx;
+}
+.flex {
+	display: flex;
+}
+/*弹出层*/
+
+/*横向滚动*/
+
+/*横向滚动*/

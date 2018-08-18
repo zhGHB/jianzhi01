@@ -1,0 +1,65 @@
+<view class="top-box">
+	<view class="top-title">
+		色达净化之旅，走进藏传佛教之地
+	</view>
+	<view class="top-item flex" wx:for="{{list}}">
+		<view class="flex-item flex1">
+			<text class="top-title">1对</text>
+			<text class="top-num top-status">已成行</text>
+		</view>
+		<view class="flex-item flex1">
+			<text class="top-title">名额</text>
+			<text class="top-num">30</text>
+		</view>
+		<view class="flex-item flex1">
+			<text class="top-title">已报</text>
+			<text class="top-num">30</text>
+		</view>
+		<view class="flex-item flex1">
+			<text class="top-title">剩余</text>
+			<text class="top-num">30</text>
+		</view>
+	</view>
+	<view class="top-time">
+		报名截止日期:<text class="top-time-text">2018/06/14 23:00</text>
+	</view>
+</view>
+<view class="list bgF">
+	<view class="list-box" wx:for="{{list}}">
+		<view class="list-title">
+			<text class="list-title-text">1队名单列表</text>
+		</view>
+		<view class="list-item flex" wx:for="{{list}}" bindtap="goVIPInfo">
+			<view class="flex alignCenter">
+				<text class="NO">{{index + 1}}</text>
+			</view>
+			<view class="flex alignCenter">
+				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar"/>
+			</view>
+			<view class="flex1 list-right-box flex flex-column flex-center ">
+				<view class="flex flex-bettewn">
+					<text class='list-name'>小刺刺</text>
+					<text class="list-time">2018/06/14 23:00</text>
+				</view>
+				<view class="flex flex-bettewn ">
+					<text class="list-name">*****123</text>
+					<text class="colorY">报名成功</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="book-tip">
+	<view class="book-tip-text">
+		报名须知:
+	</view>
+	<view class="book-tip-text">
+		预约:预约等待支付,如不支付，则自动取消
+	</view>
+	<view class="book-tip-text">
+		如取消订单，请进入我的订单-订单详情
+	</view>
+	<view class="book-tip-text">
+		最终名单已报名结束为准
+	</view>
+</view>

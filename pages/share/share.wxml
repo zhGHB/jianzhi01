@@ -1,15 +1,12 @@
 <view class="box">
 	<view class="tab flex alignCenter bgF">
-		<veiw class="flex1 tab-item">
-			<text class="tab-text active">分享圈</text>
+		<veiw class="flex1 tab-item" wx:for="{{tabs}}">
+			<text class="tab-text {{tabIndex === index?'active':''}}" id="{{index}}" bindtap="changeTab">{{item.name}}</text>
 		</veiw>	
-		<veiw class="flex1 tab-item">
-			<text class="tab-text">已关注</text>
-		</veiw>
 	</view>
 	<!-- 内容 -->
 	<view class="share-box">
-		<view class="circle-item item bgF" wx:for="list">
+		<view class="circle-item item bgF" wx:for="list" bindtap="goDetail">
 			<!-- 头部 -->
 			<viwe class="circle-item-top flex flex-bettewn">
 				<view class="flex alignCenter">

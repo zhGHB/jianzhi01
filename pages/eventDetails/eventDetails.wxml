@@ -41,8 +41,27 @@
 				<view class="man">满</view>
 			</view>
 		</view>	
+
+		<scroll-view 
+						class="scroll"
+						scroll-x
+						
+					>
+					<view class="scroll-box flex">
+					   <view class="flexa" wx:for="{{list02}}" bindtap="goNameList">
+					   		<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" 
+					      class="scroll-img"
+					      
+					      />
+					      <view class="flex-name">小刺刺</view>
+					   	</view>
+					   </view>
+		 </scroll-view>
+
+
 	</view>
 	<!-- 报名 -->
+	<view class="line"></view>
 	<!-- 活动时间 -->
 	<view class="acitve-time-box">
 		<view class="active-title">
@@ -193,15 +212,24 @@
 		<image src="../../images/share-active-icon.png" class="bottom-btn-icon"/>
 		<view class="bottom-btn-text colorY">分享</view>
 	</view>
-	<view class="bottom-btn-item flex1 bgY bottom-right">
+	<view class="bottom-btn-item flex1 bgY bottom-right" bindtap="goBook">
 		<view class="now-book-text colorF">立即报名</view>
 		<view class="bottom-btn-text colorF">30天20时16分22秒后截止</view>
 	</view>
 </view>
 <!-- 底部按钮 -->
 
-
-
+<!-- 报名弹出层 -->
+<view class="mask  flex-center alignCenter {{showMask?'flex':''}}">
+  <view class="mask-content bgF">
+  	<view class="tip">为了保证您的信息安全，请绑定手机号。</view>
+  	<view class="mask-btn flex flex-bettewn">
+  		<view class="confirm colorF m-btn bgY">前往绑定</view>
+  		<view class="confirm colorF m-btn bgG" bindtap="cancel">取消</view>
+  	</view>
+  </view>
+</view>
+<!-- 报名弹出层 -->
 
 
 

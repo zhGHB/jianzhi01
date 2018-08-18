@@ -16,7 +16,8 @@ Page({
         interval: 5000,
         duration: 1000,
         list: [1, 3],
-        list02: [1, 2, 3, 34, 5454, 5, 6, 6]
+        list02: [1, 2, 3],
+        showMask: false
     },
 
     /**
@@ -24,6 +25,23 @@ Page({
      */
     onLoad: function(options) {
         this.get();
+    },
+    // 去报名、
+    goBook() {
+        this.setData({
+            showMask: true
+        })
+    },
+    // 去报名k
+    // 取消
+    cancel() {
+        this.setData({showMask:false})
+    },
+    // 取消
+    goNameList() {
+        wx.navigateTo({
+         url:'../nameList/nameList',
+        })
     },
      get() {
         console.log("开始")

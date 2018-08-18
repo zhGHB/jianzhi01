@@ -6,20 +6,20 @@
 		<view class="top-title colorF">冻结：0.00</view>
 	</view>
 	<view class="item-box">
-		<view class="item bgF flex flex-bettewn">
+		<view class="item bgF flex flex-bettewn" bindtap="goDetail" data-path="../withdraw/withdraw">
 			<view >
-				<text class="item-text">体现</text>
+				<text class="item-text">提现</text>
 			</view>
 			<view>
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="right-icon"/>
+				<image src="../../images/arrow-right.png" class="right-icon"/>
 			</view>
 		</view>
-		<view class="item flex bgF flex-bettewn">
+		<view class="item flex bgF flex-bettewn" bindtap="goDetail" data-path="../withdraw/withdraw">
 			<view >
 				<text class="item-text">我的优惠券</text>
 			</view>
 			<view>
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="right-icon"/>
+				<image src="../../images/arrow-right.png" class="right-icon"/>
 			</view>
 		</view>
 	</view>

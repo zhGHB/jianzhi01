@@ -44,3 +44,6 @@ page {
 .rate-btn {
 	padding:8rpx 20rpx;margin-top: 14rpx;margin-bottom: 14rpx;
 }
+.arrow-down {
+	width:26rpx;height: 20rpx;
+}

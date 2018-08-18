@@ -1,0 +1,14 @@
+<!--components/search/search.wxml-->
+<!-- 搜索 -->
+	<view class="search-box flex">
+		<view class="s-left flex alignCenter">
+			<text class="colorF">日历</text>
+		</view>
+		<view class="flex1 alignCenter flex">
+			<input type="text" name="keyWords" class="search-input" placeholder="请输入关键字"/>
+		</view>
+		<view class="s-right flex alignCenter">
+			<text class="colorF">客服</text>
+		</view>
+	</view>
+	<!-- 搜索 -->

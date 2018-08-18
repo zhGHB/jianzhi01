@@ -1,16 +1,11 @@
-// pages/share/share.js
+// pages/nameList/nameList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [1,2,3,4],
-    tabs: [
-      {name:'分享圈',id: 0},
-      {name: '已关注', id: 1}
-    ],
-    tabIndex: 0
+    list: [1,2]
   },
 
   /**
@@ -19,13 +14,9 @@ Page({
   onLoad: function (options) {
   
   },
-  changeTab(e) {
-    let id = e.target.id;
-    this.setData({tabIndex: parseInt(id)})
-  },
-  goDetail() {
+  goVIPInfo() {
     wx.navigateTo({
-     url:'../rate/rate',
+     url:'../VIPInfo/VIPInfo',
     })
   },
   /**

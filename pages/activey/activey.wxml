@@ -1,0 +1,57 @@
+<view class="box">
+    <!-- 搜索 -->
+    <search></search>
+    <!-- 搜索 -->
+    <!-- 轮播图 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item class="swiper-item">
+                <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 轮播图 -->
+    <!-- 我的兴趣 -->
+    <view class="my-int">
+        <view class="my-int-text">我的兴趣</view>
+        <view class="int-tag-box flex">
+            <view class="tag-item colorY">
+                登山1
+            </view>
+            <view class="tag-item colorY">
+                徒步2
+            </view>
+            <view class="tag-item colorY">
+                登山2
+            </view>
+            <view class="tag-item colorY">
+                登山3
+            </view>
+            <view class="tag-item colorY">
+                登山
+            </view>
+        </view>
+    </view>
+    <!-- 我的兴趣 -->
+    <view class="content-box">
+        <!-- 选项卡 -->
+        <view class="tab-box flex">
+            <view class="tab-item flex1 flex flex-center" wx:for="{{tabs}}" wx:key="{{index}}" >
+                <view class="tab-text {{tabIndex === index?'active':''}}"
+                    data-id="{{index}}" bindtap="changeTag"
+                >{{item.name}}</view>
+            </view>
+        </view>
+        <!-- 选项卡 -->
+        <!-- 列表 -->
+        <view class="list-box flex">
+            <view class="list-item" wx:for="{{list}}" bindtap="goDetail">
+                <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="img" />
+                <view class="list-name">春节特别期</view>
+                <view class="sub-name">色达净化之路</view>
+                <view class="list-price">早鸟价:￥2888</view>
+            </view>
+        </view>
+        <!-- 列表 -->
+    </view>
+</view>

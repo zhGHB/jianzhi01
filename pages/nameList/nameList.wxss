@@ -1,0 +1,61 @@
+page {
+	background: #fff;
+}
+.top-box {
+	padding:30rpx 20rpx;
+	font-size:30rpx;
+	background: #E5E5E4;
+}
+.top-title {
+	margin-bottom: 20rpx;
+}
+.top-num {
+	margin-left: 10rpx;
+	color:rgba(0,0,0,0.5);
+}
+.top-status {
+	color:#EA5504;
+}
+.top-item {
+	border-bottom: 1px solid #000;
+}
+.top-item:last-child {
+	border:none;
+}
+.top-time {
+	margin-top: 20rpx;
+}
+.top-time-text {
+	color:rgba(0,0,0,0.5);margin-left: 20rpx;
+}
+
+/*列表*/
+.avatar {
+	width:100rpx;height: 100rpx;border-radius: 50%;
+	margin-left: 20rpx;margin-right: 20rpx;
+}
+.list-right-box {
+	font-size:30rpx;
+}
+.list-item {
+	padding:20rpx 30rpx;
+	border-bottom: 1px solid #ccc;
+}
+.list-item:last-child {
+	border:none;
+}
+.list-title {
+	font-size:30rpx;padding-left: 30rpx;
+	border-bottom: 4rpx solid #ccc;padding-top: 20rpx;padding-bottom: 10rpx;
+}
+.list-title-text {
+	border-bottom: 6rpx solid #EA5504;padding-bottom: 10rpx;
+}
+/*列表*/
+/*报名须知*/
+.book-tip-text {
+	font-size:24rpx;
+}
+.book-tip {
+	background: #E5E5E4;padding:30rpx;
+}

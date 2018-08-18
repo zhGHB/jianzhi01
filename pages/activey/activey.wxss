@@ -1,0 +1,56 @@
+/* pages/activey/activey.wxss */
+
+
+.slide-image {
+	width:100%;height: 300rpx;
+}
+.swiper-item {
+	height: 300rpx;
+}
+.swiper {
+	height: 300rpx;
+}
+.my-int {
+	padding:20rpx 30rpx;border-bottom: 30rpx solid #ccc;
+}
+.my-int-text {
+	font-size:30rpx;
+}
+.tag-item {
+	border-radius: 4rpx;
+	border:1px solid #EA5504;font-size:20rpx;padding:4rpx 10rpx;margin-right: 10rpx;
+	margin-top: 10rpx;
+}
+.active {
+	color:#EA5504;
+	border-bottom: 4rpx solid #EA5504;
+}
+.content-box {
+	padding-top: 20rpx;
+}
+.list-box {
+	flex-wrap: wrap;justify-content: space-around;margin-top: 20rpx;
+}
+.list-item {
+	width:31%; 
+	/*display: inline-block;margin:1.5%;*/
+	margin-bottom: 20rpx;
+}
+.img {
+	width:100%;height: 200rpx;
+}
+.list-name {
+	font-size:32rpx;
+}
+.sub-name {
+	font-size:30rpx;
+}
+.list-price {
+	color:#EA5504;font-size:22rpx;
+}
+
+
+
+
+
+
