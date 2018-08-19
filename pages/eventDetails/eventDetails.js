@@ -1,5 +1,5 @@
 // import {getBanner} from '../../utils/api.js';
-import ajax from '../../utils/ajax.js';
+import api from '../../api/index.js';
 Page({
 
     /**
@@ -24,7 +24,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.get();
+        let id = options.id;
+        this.getDatail(id);
+    },
+    getDatail(id) {
+        api.getActiveDetail({id}).then((res)=>{
+            console.log(id)
+        });
     },
     // 去报名、
     goBook() {
@@ -43,30 +49,7 @@ Page({
          url:'../nameList/nameList',
         })
     },
-     get() {
-        console.log("开始")
-        // let res = await this.ajax();
-        console.log("结束")
-    },
-    async ajax(url, data) {
-        return new Promise((resove, reject) => {
-            wx.request({
-                url: 'https://hw.scmxkj.com/hw/home/banner',
-                data: {},
-                header: {
-                    'content-type': 'application/json' // 默认值
-                },
-                success: function(res) {
-                    resove(res.data);
-                    console.log("中间")
-                },
-                fail: function(err) {
-                    reject(err);
-                }
-
-            })
-        })
-    },
+     
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

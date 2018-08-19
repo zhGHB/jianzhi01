@@ -4,9 +4,9 @@
     <!-- 搜索 -->
     <!-- 轮播图 -->
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
-        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <block wx:for="{{banner}}" wx:key="{{index}}">
             <swiper-item class="swiper-item">
-                <image src="{{item}}" class="slide-image" />
+                <image src="{{item.img}}" class="slide-image" />
             </swiper-item>
         </block>
     </swiper>
@@ -38,20 +38,28 @@
         <view class="tab-box flex">
             <view class="tab-item flex1 flex flex-center" wx:for="{{tabs}}" wx:key="{{index}}" >
                 <view class="tab-text {{tabIndex === index?'active':''}}"
-                    data-id="{{index}}" bindtap="changeTag"
-                >{{item.name}}</view>
+                    data-id="{{index}}" bindtap="changeTag" data-cateID="{{item.id}}"
+                >{{item.tabName}}</view>
             </view>
         </view>
         <!-- 选项卡 -->
         <!-- 列表 -->
-        <view class="list-box flex">
-            <view class="list-item" wx:for="{{list}}" bindtap="goDetail">
-                <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="img" />
-                <view class="list-name">春节特别期</view>
-                <view class="sub-name">色达净化之路</view>
-                <view class="list-price">早鸟价:￥2888</view>
+        <scroll-view class="scroll-box" scroll-y="{{true}}" bindscrolltolower="loadMore">
+        <view class="list-box flex" wx:for="{{tabs}}" wx:if="{{tabIndex === index}}" scroll-y wx:key="{{index}}">
+            <view class="list-item {{cindex%3===1?'m':''}}" wx:key="{{cindex}}"
+            wx:for="{{item.list}}" bindtap="goDetail" data-id="{{citem.id}}" wx:for-item="citem"
+            wx:for-index="cindex">
+                <view class="address">{{citem.set_dress}}</view>
+                <image src="{{citem.cover}}" class="img" />
+                <view class="list-name">{{citem.set_dress}}</view>
+                <view class="sub-name">{{citem.title}}</view>
+                <view class="list-price">早鸟价:￥{{citem.adv_price}}</view>
             </view>
+            <view class="isMore" wx:if="{{item.isMore}}">上拉加载跟多</view>
+            <view class="isMore" wx:if="{{!item.isMore}}">没有更多了...</view>
         </view>
+        
+    </scroll-view>
         <!-- 列表 -->
     </view>
 </view>

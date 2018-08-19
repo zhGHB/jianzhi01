@@ -11,8 +11,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-	"appid": "wxe2d3d6d2e85d7420",
+	"libVersion": "2.1.3",
+	"appid": "wx65cd51ea210cbe2a",
 	"projectname": "tourism",
 	"isGameTourist": false,
 	"condition": {

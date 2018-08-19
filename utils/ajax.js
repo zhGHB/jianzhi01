@@ -1,22 +1,34 @@
- let baseUrl = '';
-  function ajax(url, data) {
-     return new Promise((resove, reject) => {
-         wx.request({
-             url: 'https://hw.scmxkj.com/hw/home/banner',
-             data: {},
-             header: {
-                 'content-type': 'application/json' // 默认值
-             },
-             success: function(res) {
-             	
-                 resove(res.data);
-                 console.log("中间")
-             },
-             fail: function(err) {
-                  reject(err);
-             }
+  import config from './config.js';
+  let baseUrl = config === 'dev' ? 'http://ly.yoyoacg.com/ly/' : 'https://hw.scmxkj.com/hw/';
+  function ajax(url, type = 0, data = {}) {
+      let method = type === 0? 'GET' : "POST";
+      return new Promise((resove, reject) => {
+          wx.request({
+              url: baseUrl + url,
+              data: data,
+              method: method,//get为默认方法/POST
+              success: function(res) {
+                  if(res.data.status === 1) {
+                    resove(res.data.result);
+                  } else if(res.data.status === 2 ) {
+                    toast(res.data.msg);
+                  } 
+                  
 
-         })
-     })
- };
- export default ajax;
+              },
+              fail: function(err) {
+                toast("请求失败"); 
+              }
+
+          })
+      })
+  };
+  function toast(msg) {
+    wx.showToast({
+        title: msg,
+        icon: 'loading',
+        duration: 1000,
+        mask: true
+    })
+  }
+  export default ajax;

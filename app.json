@@ -20,6 +20,7 @@
         "pages/activitySearch/activitySearch",
         "components/filter/filter",
         "components/search/search",
+        "components/toast/toast",
         "pages/VIPInfo/VIPInfo",
         "pages/setting/setting",
         "pages/myPurse/myPurse",

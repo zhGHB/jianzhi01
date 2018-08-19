@@ -1,46 +1,114 @@
 // pages/activey/activey.js
+import api from '../../api/index.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-        'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-        'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
+    banner:[],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    tabs:[
-      {name: '推荐',id: 0},
-      {name: '周边',id: 1},
-      {name: '长线',id: 2},
-      {name: '节假日',id: 3},
-      {name: '定制',id: 4}
-    ],
-    tabIndex: 0,
-    list:[1,1,1,1,1,1,1,1,1,11,2,2]
+    tabs:[],
+    tabIndex: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getBanner();
+    this.getCate();
+
   },
-  changeTag(e) {
-    let id = e.currentTarget.dataset.id;
-    this.setData({
-      tabIndex: id
+  getBanner() {
+    api.getActiveBanner().then((res)=>{
+      this.setData({
+        banner: res
+      })
+    });
+  },
+  // 获取分类
+  getCate() {
+    api.getCate().then((res)=>{
+      let tabs = [];
+      let firstObj = {
+        tabName: '推荐',
+        id: 0,
+        page: 0,
+        list: [],
+        click: true,
+        isMore: true
+      };
+      tabs.push(firstObj);
+      res.map((item,index)=>{
+        let obj = {};
+        obj.tabName = item.cate_name;
+        obj.id = item.id;
+        obj.page = 0;
+        obj.list = [];
+        obj.click = true;
+        obj.isMore= true;
+        tabs.push(obj);
+      });
+      this.setData({
+        tabs
+      },()=>{
+        this.getListByID(0);
+      });
     })
   },
+  // 获取分类
+  changeTag(e) {
+    let id = e.currentTarget.dataset.id;
+    let cateID = e.currentTarget.dataset.cateid;
+    this.setData({
+      tabIndex: id
+    },()=>{
+      this.getListByID(cateID);
+    });
+    
+  },
+  // 请求数据
+  getListByID(cate,type = 0) {
+    let tabs = this.data.tabs;
+    let index = this.data.tabIndex;
+    if(type === 0) {
+        if(!tabs[index].click) {
+          return;
+        } 
+    }else {
+      if(!tabs[index].isMore) {
+        return;
+      }
+    }
+    let page = this.data.tabs[index].page;
+    let params = {page,cate};
+    api.getListByID(params).then((res)=>{
+      tabs[index].click = false;
+      tabs[index].page ++ ;
+      tabs[index].list = [...tabs[index].list,...res];
+      if(res.length < 10) {
+        tabs[index].isMore = false;
+      }
+      this.setData({tabs});
+    });
+
+  },
+  // 加载跟多
+  loadMore() {
+    let cateID = this.data.tabs[this.data.tabIndex].id;
+    this.getListByID(cateID,1);
+  },
+  // 加载跟对
+  // 请求数据
   // 详情
-  goDetail() {
+  goDetail(e) {
+   let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-     url:'../eventDetails/eventDetails',
+     url:`../eventDetails/eventDetails?id=${id}`,
     })
   },
   // 详情
