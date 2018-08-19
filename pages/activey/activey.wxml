@@ -51,7 +51,7 @@
             wx:for-index="cindex">
                 <view class="address">{{citem.set_dress}}</view>
                 <image src="{{citem.cover}}" class="img" />
-                <view class="list-name">{{citem.set_dress}}</view>
+                <!-- <view class="list-name">{{citem.set_dress}}</view> -->
                 <view class="sub-name">{{citem.title}}</view>
                 <view class="list-price">早鸟价:￥{{citem.adv_price}}</view>
             </view>

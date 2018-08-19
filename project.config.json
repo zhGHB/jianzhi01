@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -68,7 +68,14 @@
 				{
 					"id": -1,
 					"name": "6",
-					"pathName": "pages/myPurse/myPurse"
+					"pathName": "pages/myPurse/myPurse",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "12",
+					"pathName": "pages/eventDetails/eventDetails",
+					"query": "id=1"
 				}
 			]
 		}

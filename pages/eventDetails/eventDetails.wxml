@@ -1,9 +1,9 @@
-
+<import src="../../wxParse/wxParse.wxml" />
 <veiw class="box">
 	<!-- 轮播图 -->
 	<swiper indicator-dots="{{indicatorDots}}"
 	  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
-	  <block wx:for="{{imgUrls}}">
+	  <block wx:for="{{detail.imgs}}">
 	    <swiper-item class="swiper-item">
 	      <image src="{{item}}" class="slide-image" />
 	    </swiper-item>
@@ -11,18 +11,18 @@
 	</swiper>
 	<!-- 轮播图 -->
 	<view class="dis-box">
-		<view class="active-name">端午特别期】<text class="sub-active-name">色达净化之旅，走进藏传佛教之地</text></view>
-		<view class="active-price">活动费：¥2880/人</view>
-		<view class="morming-price">早鸟价：<text class="morming-price-num">¥2730/人</text></view>
+		<view class="active-name">{{detail.title}}
+			<!-- <text class="sub-active-name">色达净化之旅，走进藏传佛教之地</text> -->
+		</view>
+		<view class="active-price">活动费：¥{{detail.price}}/人</view>
+		<view class="morming-price">早鸟价：<text class="morming-price-num">¥{{detail.adv_price}}/人</text></view>
 		<veiw class="flex flex-bettewn alignCenter">
 			<view class="flex alignCenter">
 				<text class="grade-text">难度：</text>
-				<image src="../../images/star.png" class="star"/>
-				<image src="../../images/star.png" class="star"/>
-				<image src="../../images/star.png" class="star"/>
+				<image src="{{diff > index ? '../../images/star-active.png':'../../images/star.png'}}" class="star" wx:for="{{maxDiff}}"/>
 			</view>
 			<view class="flex alignCenter">
-				<text class="go-num-text">有76人去过</text>
+				<text class="go-num-text">有{{detail.people_num}}人去过</text>
 				<view class="collect-btn colorF bgY flex alignCenter"> 
 					<image src="../../images/star.png" class="star"/>
 					<text class="go-num-text">收藏</text>
@@ -68,35 +68,31 @@
 			活动时间：
 		</view>
 		<view class="flex">
-			<view class="active-big-btn flex1 ">
-				<view class="active-content bgY" >
-					<view class="big-btn-time">2018/06/16-2018/06/23</view>
-					<view class="big-btn-text">报名中|剩12名额 </view>
+			<view class="active-big-btn flex1" wx:for="{{detail.time_team}}">
+				<view class="active-content {{index === 0?'bgY':'bgG'}}" >
+					<view class="big-btn-time">{{item.start_time}}-{{item.end_time}}</view>
+					<view class="big-btn-text">报名中|剩{{item.diff_num}}名额 </view>
 				</view>
 			</view>
-			<view class="active-big-btn flex1 ">
+			<!-- <view class="active-big-btn flex1 ">
 				<view class="active-content bgG">
 					<view class="big-btn-time">2018/06/16-2018/06/23</view>
 					<view class="big-btn-text">报名中|剩12名额 </view>
 				</view>
-			</view>
+			</view> -->
 		</view>
 		<view class="active-address-box flex">
 			<view class="address-icon-box">
 				<image src="../../images/address-icon.png" class="address-icon"/>
 			</view>
 			<view class="flex1 address-text">
-				   集合地点：成都金牛区雷曼国际酒店（活动出发前    三天公布具体位置）
+				   集合地点：{{detail.set_dress}}
 			</view>
 		</view>
 		<view class="active-address-box ">
-			<view class="line-text">
-				   成都东站出发：地铁2号线/7号线，乘坐到蜀汉路东 地铁站A口，步行378m；  
+			<view class="wxParse">
+			    <template is="wxParse" data="{{wxParseData:route.nodes}}"/>
 			</view>
-			<view class="line-text">
-				   双流机场出发：地铁10号线，乘坐到太平园 换乘 7号线，乘坐到一品天下地铁E出口，
-			</view>
-			<view class="line-text">地图导航搜素金牛区雷曼国际酒店  </view>
 		</view>
 	</view>
 	<!-- 活动时间 -->
@@ -180,15 +176,15 @@
 	<!-- 活动推荐 -->
 	<view class="activityRe-box">
 		<view class="activityRe-title">活动推荐:</view>
-		<view class="activityRe-item flex" wx:for="{{list}}">
+		<view class="activityRe-item flex" wx:for="{{detail.recom_list}}">
 			<view class="">
-				<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="activeRe-img"/>
+				<image src="{{item.cover}}" class="activeRe-img"/>
 			</view>
 			<view class="flex1 flex flex-column flex-bettewn">
-				<view class="activeRe-name">朝圣梅里】云南梅里雪山雨崩 徒步6日游</view>
+				<view class="activeRe-name">{{item.title}}</view>
 				<view class="activeRe-time flex flex-bettewn">
-					<view>集合日2018/06/16</view>
-					<view>183人去过</view>
+					<view>集合日{{item.start_time}}</view>
+					<view>{{item.people_num}}人去过</view>
 				</view>
 			</view>
 		</view>

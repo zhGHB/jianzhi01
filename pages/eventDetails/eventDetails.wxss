@@ -1,4 +1,4 @@
-
+@import "../../wxParse/wxParse.wxss";
 page {
 	padding-bottom: 120rpx;
 }
@@ -257,4 +257,5 @@ page {
 
 /*横向滚动*/
 
-/*横向滚动*/
+/*横向滚动
+

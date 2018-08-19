@@ -1,5 +1,9 @@
-// import {getBanner} from '../../utils/api.js';
+
 import api from '../../api/index.js';
+
+// const WxParse = require('../../wxParse/wxParse.js');
+// import {WxParse} from '../../wxParse/wxParse.js'
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
     /**
@@ -17,7 +21,10 @@ Page({
         duration: 1000,
         list: [1, 3],
         list02: [1, 2, 3],
-        showMask: false
+        showMask: false,
+        detail: {},
+        diff:0,
+        maxDiff: 5
     },
 
     /**
@@ -28,8 +35,13 @@ Page({
         this.getDatail(id);
     },
     getDatail(id) {
+        let that = this;
         api.getActiveDetail({id}).then((res)=>{
-            console.log(id)
+            this.setData({
+                detail:res,
+                diff: parseInt(res.diff)
+            });
+            WxParse.wxParse('route', 'html', res.route, that, 5);
         });
     },
     // 去报名、
