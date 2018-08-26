@@ -14,9 +14,18 @@ page {
 .active {
 	border-bottom: 4rpx solid #EA5504;color:#EA5504;
 }
-
+.circle-item-top {
+}
+.circle-item {
+}
 .share-box {
-	margin-top: 27rpx;margin-left: 23rpx;margin-right: 23rpx;
+	/*margin-top: 27rpx;margin-left: 23rpx;margin-right: 23rpx;*/
+	margin-top: 30rpx;
+	border:1px solid solid;
+	height: 1000rpx;
+}
+.box-box {
+	margin-left: 20rpx;margin-right: 20rpx;
 }
 .share-avatar {
 	width:90rpx;height: 90rpx;border-radius: 50%;margin-right: 14rpx;
@@ -28,7 +37,13 @@ page {
 	color:#A0A0A0;font-size:24rpx;
 }
 .watch-btn {
-	border:1px solid #EA5504;border-radius: 4rpx;font-size:24rpx;padding:10rpx;
+	border:1px solid #000;border-radius: 4rpx;font-size:24rpx;padding:10rpx;
+}
+.colorY {
+	
+}
+.borderY {
+	border:1px solid #EA5504;
 }
 .item {
 	padding:20rpx;margin-bottom: 12rpx;
@@ -55,4 +70,7 @@ page {
 }
 .share-heart {
 	width:33rpx;height: 29rpx;
+}
+.no-more {
+	text-align: center;font-size: 28rpx;
 }

@@ -10,6 +10,13 @@ Page({
      * 页面的初始数据
      */
     data: {
+        tabs: [
+          {name: '活动详情'},
+          {name: '行程准备'},
+          {name: '费用说明'},
+          {name: '评价'}
+        ],
+        tabIndex: 0,
         imgUrls: [
             'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
             'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -23,31 +30,50 @@ Page({
         list02: [1, 2, 3],
         showMask: false,
         detail: {},
-        diff:0,
-        maxDiff: 5
+        diff: 0,
+        maxDiff: 5,
+        leadList: [],
+        activeRate: []
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function(options) {
         let id = options.id;
+        this.setData({id});
         this.getDatail(id);
+        this.getActiveLead(id);
+        this.getActiveRate(id);
     },
-    getDatail(id) {
+    changeTab(e) {
+      let id= e.currentTarget.dataset.id;
+      this.setData({tabIndex: id});
+    },
+    getDatail(id) { // 获取详情
         let that = this;
         api.getActiveDetail({id}).then((res)=>{
             this.setData({
-                detail:res,
+                detail: res,
                 diff: parseInt(res.diff)
             });
             WxParse.wxParse('route', 'html', res.route, that, 5);
+            WxParse.wxParse("rate", 'html' ,res.details, that, 5);
         });
+    },
+    getActiveLead(active_id) { // 获取领队
+        api.getActiveLead({active_id}).then((res)=> {
+          this.setData({leadList: res});
+        });
+    },
+    getActiveRate(active_id) { // 获取评价
+      api.getActiveRate({active_id}).then((res)=> {
+        this.setData({activeRate: res});
+      });
     },
     // 去报名、
     goBook() {
-        this.setData({
-            showMask: true
+        // this.setData({
+        //     showMask: true
+        // });
+        wx.navigateTo({
+          url: '../orderConfirmation/orderConfirmation?id=' + this.data.id
         })
     },
     // 去报名k
@@ -61,7 +87,14 @@ Page({
          url:'../nameList/nameList',
         })
     },
-     
+    goHome() {
+      wx.switchTab({
+         url: '../activey/activey'
+      });
+    },
+    share() {
+      Page.onShareAppMessage();
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

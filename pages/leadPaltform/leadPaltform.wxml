@@ -1,0 +1,91 @@
+<view class="box">
+	<!-- 头部 -->
+	<view class="top flex alignCenter bgF">
+		<view class="avatar-box flex alignCenter">
+			<image src="http://f11.baidu.com/it/u=2465775762,1509670197&fm=72" class="avatar-img"/>
+		</view>	
+		<view class="">
+			<view class="vip-name">小小刺</view>
+			<view class="vip-dis">会员号:66688</view>
+			<view class="vip-dis">会员号:已加入：1年36天</view>
+		</view>
+	</view>
+	<!-- 头部 -->
+	<!-- 中部 -->
+	<view class="middle-box flex bgY colorF">
+		<view class="middle-item flex1">
+			<view class="middle-title">活动收入（元）</view>
+			<view class="money">¥ 0.00</view>
+		</view>
+		<view class="middle-item flex1">
+			<view class="middle-title">邀请收入（元）</view>
+			<view class="money">¥ 0.00</view>
+		</view>
+		<view class="middle-item flex1">
+			<view class="middle-title">福利池（元）</view>
+			<view class="money">¥ 0.00</view>
+		</view>
+	</view>
+	<!-- 中部 -->
+	<!-- 我的列表 -->
+	<view class="item-box bgF">
+		<view class="item flex flex-bettewn" wx:for="{{item}}" bindtap="goDetail" data-path="{{item.path}}">
+			<view class="flex">
+				<view class="flex alignCenter icon-box flex-center">
+					<image src="{{item.iconUrl}}" class="{{index === 0?'item-icon':'item-icon02'}}"/>
+				</view>
+				<view class="flex alignCenter"><text class="item-name">{{item.name}}</text></view>
+			</view>
+			<view class="flex alignCenter">
+				<image src="../../images/arrow-right.png" class="go-right-icon"/>
+			</view>
+		</view>
+	</view>
+	<!-- 我的列表 -->
+	<view class="bgF platform-item-box" wx:if="{{!isXiaoshou}}">
+		<view class="platform-item">
+			<image src="../../images/icon3.png" style="width:72rpx;height: 77rpx;"/>
+			<view class="platform-text">考核状态</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon4.png" style="width:82rpx;height: 75rpx;"/>
+			<view class="platform-text">我的邀请</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon5.png" style="width:62rpx;height: 73rpx;"/>
+			<view class="platform-text">我的活动</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon6.png" style="width:72rpx;height: 77rpx;"/>
+			<view class="platform-text">活动分销</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon7.png" style="width:82rpx;height: 75rpx;"/>
+			<view class="platform-text">邀请领队</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon8.png" style="width:62rpx;height: 73rpx;"/>
+			<view class="platform-text">领队资讯</view>
+		</view>
+	</view>
+
+
+	<view class="bgF platform-item-box" wx:if="{{isXiaoshou}}">
+		<view class="platform-item">
+			<image src="../../images/icon3.png" style="width:72rpx;height: 77rpx;"/>
+			<view class="platform-text">考核状态</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon4.png" style="width:82rpx;height: 75rpx;"/>
+			<view class="platform-text">我的邀请</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon6.png" style="width:72rpx;height: 77rpx;"/>
+			<view class="platform-text">活动分销</view>
+		</view>
+		<view class="platform-item">
+			<image src="../../images/icon8.png" style="width:62rpx;height: 73rpx;"/>
+			<view class="platform-text">平台咨询</view>
+		</view>
+	</view>
+</view>

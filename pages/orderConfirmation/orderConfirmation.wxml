@@ -1,55 +1,58 @@
 <view class="box">
 	<view class="top flex bgF">
 		<view class="left">
-			<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="goods-cover"/>
+			<image src="{{info.cover}}" class="goods-cover"/>
 		</view>
 		<view class="right">
-			<view class="top-text">【国庆特别期】色达净化之旅</view>
-			<view class="top-text mt20">领队：小小小刺</view>
-			<view class="top-text">集合地址：成都</view>
-			<view class="top-text">集合地址：成都</view>
+			<view class="top-text">{{info.title}}</view>
+			<view class="top-text mt20">领队：{{info.lander_name}}</view>
+			<view class="top-text">集合时间：{{info.start_time}}</view>
+			<view class="top-text">集合地址：{{info.set_dress}}</view>
 		</view>
 	</view>
 	
 		<view class="contact-box bgF padding flex">
 			<view class="flex1">
-				<view class="contact-item">网名：小刺</view>
-				<view class="contact-item">手机号：1334880133</view>
-				<view class="contact-item">性别：女</view>
-				<view class="contact-item">真实姓名：xxx </view>
+				<view class="contact-item">网名：{{info.nickname}}</view>
+				<view class="contact-item">手机号：{{info.mobile}}</view>
+				<view class="contact-item">性别：{{info.sex == 1?'男':'女'}}</view>
+				<view class="contact-item">真实姓名：{{info.name}} </view>
 				<view class="contact-item">证件：身份证</view>
-				<view class="contact-item">证件号：1284736295017428</view>
-				<view class="contact-item">出生日期：1334880133</view>
-				<view class="contact-item">紧急人联系号码：1334880133</view>
-				<view class="contact-item">紧急人姓名：1334880133</view>
+				<view class="contact-item">证件号：{{info.type_number}}</view>
+				<view class="contact-item">出生日期：{{info.birthday}}</view>
+				<view class="contact-item">紧急人联系号码：{{info.urgent_mobile}}</view>
+				<view class="contact-item">紧急人姓名：{{info.urgent_name}}</view>
 			</view>
 			<view class="flex alignCenter">
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="right-icon"/>
+				<image src="../../images/arrow-right.png" class="right-icon"/>
 			</view>
 		</view>
-		<view class="agree-box padding bgF">
-			<view class="agree-text">我已详细阅读并同意<text class="colorY">《xxx合同》</text></view>
+		<view class="agree-box padding bgF flex alignCenter">
+			<image src="{{agree?'../../images/black-check.png':'../../images/circle.png'}}" bindtap="agree"
+			class="check-img" /><view class="agree-text">我已详细阅读并同意<text class="colorY">《xxx合同》</text></view>
 		</view>
-		<div class="coup flex flex-bettewn bgF padding">
+		<div class="coup flex flex-bettewn bgF padding" wx:if="{{info.is_coupon}}">
 			<view>优惠券</view>
-			<view>1张可用</view>
+			<view class="coup-text flex">
+								<view class="flex alignCenter" ><view>1张可用</view></view>
+								<view class="flex alignCenter" style="margin-left: 10rpx;">
+									<image src="../../images/arrow-right.png" class="right-icon"/>
+								</view>
+							</view>
 		</div>
 		<view class="two-box bgF padding">
 			<view class="flex flex-bettewn bgF">
-				<view class="coup-text">优惠券</view>
+				<view class="coup-text">报名费</view>
 				<view class="coup-text flex">
-					<view class="flex alignCenter" ><view>1张可用</view></view>
-					<view class="flex alignCenter" style="margin-left: 10rpx;">
-						<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="right-icon"/>
-					</view>
+					<view class="flex alignCenter" ><view>￥{{info.price}}</view></view>
 				</view>
 			</view>
 			<view class="flex flex-bettewn bgF mt20">
 				<view class="coup-text">优惠券</view>
-				<view class="coup-text colorY">￥20.00</view>
+				<view class="coup-text colorY">￥0.00</view>
 			</view>
 		</view>
-	<view class="btn-box bgY textCenter colorF">
-		提交订单(¥2880)
+	<view class="btn-box bgY textCenter colorF" bindtap="goPay">
+		提交订单(¥{{info.price}})
 	</view>
 </view>

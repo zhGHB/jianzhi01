@@ -1,0 +1,11 @@
+.my-int {
+	padding:20rpx 30rpx;border-bottom: 30rpx solid #ccc;
+}
+.my-int-text {
+	font-size:30rpx;
+}
+.tag-item {
+	border-radius: 4rpx;
+	border:1px solid #EA5504;font-size:20rpx;padding:4rpx 10rpx;margin-right: 10rpx;
+	margin-top: 10rpx;
+}

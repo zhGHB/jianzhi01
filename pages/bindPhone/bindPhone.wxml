@@ -1,0 +1,18 @@
+<view class="top">
+	<view class="bind-title">请输入新手机号</view>
+	<view class="bind-sub-title">需要输入您要修改新手机号并验证</view>
+</view>
+<view class="item flex alignCenter">
+	<view class="item-title">+86</view>
+	<input type="number" name="phone" class="item-input flex1" placeholder="请输入手机号" />
+</view>
+<view class="item flex alignCenter">
+	<view class="item-title">验证码</view>
+	<input type="number" name="phone" class="item-input flex1" placeholder="请输入手机号" />
+	<view class="send-btn bgY">发送验证码</view>
+</view>
+<view class="confirm-box flex flex-center">
+	<view class="confirm bgY colorF">
+		确认
+	</view>
+	</view>

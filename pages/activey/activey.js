@@ -1,4 +1,5 @@
 // pages/activey/activey.js
+let app = getApp();
 import api from '../../api/index.js';
 Page({
 
@@ -12,7 +13,8 @@ Page({
     interval: 5000,
     duration: 1000,
     tabs:[],
-    tabIndex: 0
+    tabIndex: 0,
+    tag: []
   },
 
   /**
@@ -21,7 +23,7 @@ Page({
   onLoad: function (options) {
     this.getBanner();
     this.getCate();
-
+    this.getIntTab();
   },
   getBanner() {
     api.getActiveBanner().then((res)=>{
@@ -30,13 +32,23 @@ Page({
       })
     });
   },
+  goInt() {
+    wx.navigateTo({
+     url:`../myInt/myInt`,
+    })
+  },
+  getIntTab() {
+    api.getIntTag({user_id: app.globalData.userID}).then((res)=> {
+      this.setData({tag: res});
+    })
+  },
   // 获取分类
   getCate() {
     api.getCate().then((res)=>{
       let tabs = [];
       let firstObj = {
         tabName: '推荐',
-        id: 0,
+        id: '',
         page: 0,
         list: [],
         click: true,
@@ -56,7 +68,7 @@ Page({
       this.setData({
         tabs
       },()=>{
-        this.getListByID(0);
+        this.getListByID('');
       });
     })
   },

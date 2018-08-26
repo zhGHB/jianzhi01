@@ -1,0 +1,17 @@
+<view class="title">
+	选择标签，不错过活动！ 
+</view>
+<view class="box">
+	<view class="item {{index%3==1?'m':''}}" wx:for="{{list}}" bindtap="choose" data-index="{{index}}">
+		<image src="{{item.img}}" class="img"/>
+		<view class="text-box flex flex-bettewn">
+			<view>
+				<view class="type">{{item.keywords}}</view>
+				<view class="int">{{item.count}}感兴趣</view>
+			</view>
+			<view class="select-box">
+				<image src="{{item.select?'../../images/q.png':'../../images/circle.png'}}" class="circle"/>
+			</view>
+		</view>
+	</view>
+	</view>

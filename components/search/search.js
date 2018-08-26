@@ -4,6 +4,9 @@ Component({
     innerText: {
       type: String,
       value: 'default value',
+    },
+    isInput: {
+      type: Boolean,
     }
   },
   data: {
@@ -20,11 +23,16 @@ Component({
   methods: {
     // 这里是一个自定义方法
     filter(e){
-      console.log(e);
       let id = e.currentTarget.dataset.id;      
       this.setData({
         pickActive: true,
         tabIndex: id
+      })
+    },
+    goSeach() {
+      if(this.data.isInput) return;
+      wx.navigateTo({
+       url: '../activitySearch/activitySearch',
       })
     },
     cancel() {

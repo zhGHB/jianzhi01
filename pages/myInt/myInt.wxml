@@ -1,0 +1,11 @@
+<!-- 我的兴趣 -->
+<view class="my-int">
+    <view class="my-int-text">我的兴趣</view>
+    <view class="int-tag-box flex">
+        <view class="tag-item colorY" wx:for="tag" data-id="{{index}}">
+            活动
+        </view>
+    </view>
+</view>
+<!-- 我的兴趣 -->
+<filter></filter>

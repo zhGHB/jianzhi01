@@ -1,0 +1,60 @@
+page {
+	background: #F5EFEF;
+}
+.avatar-img {
+	width:140rpx;height: 140rpx;border-radius: 50%;
+}
+.vip-name {
+	font-size:40rpx;
+}
+.vip-dis {
+	font-size:28rpx;color:#5E5D5D;
+}
+.avatar-box {
+	margin-right: 24rpx;
+}
+.top {
+	padding:50rpx;
+}
+
+.middle-title {
+	font-size:27rpx;
+}
+.money {
+	font-size:38rpx;
+}
+.middle-box {
+	text-align: center;padding:26rpx 0;
+	margin-top: 20rpx;
+}
+
+/*列表*/
+.item-box {
+	border-top:12rpx solid #F5EFEF;
+}
+.item {
+	height: 66rpx;padding:0 75rpx 0 43rpx;border-bottom: 1px solid #E4E0E0;
+}
+.item-name {
+	font-size:32rpx;color:#000;
+}
+.item-icon {
+	width:43rpx;height: 51rpx;
+}
+.item-icon02 {
+	width:55rpx;height: 55rpx;
+}
+.icon-box {
+	width:60rpx;
+}
+/*列表*/
+
+.platform-text {
+	font-size:30rpx; color:#313030;
+}
+.platform-item {
+	text-align: center;display: inline-block;width:33%;margin-top: 20rpx;
+}
+.platform-item-box {
+	margin-top: 20rpx;padding:20rpx 0;
+}

@@ -162,6 +162,7 @@ page {
 }
 .rate-list {
 	padding-top:20rpx;padding-left: 40rpx;padding-right: 40rpx;
+	border-bottom: 1px solid #ccc;padding-bottom: 20rpx;
 }
 .rate-aside {
 	font-size:20rpx;color:#A0A0A0;font-weight: 100;margin-top: 15rpx;
@@ -253,9 +254,10 @@ page {
 .flex {
 	display: flex;
 }
-/*弹出层*/
 
-/*横向滚动*/
-
-/*横向滚动
-
+.shareTBN {
+	height: 100%;font-size:0;border:none;outline:none;background: none;
+}
+.rate-star {
+	width:34rpx;height: 34rpx;
+}

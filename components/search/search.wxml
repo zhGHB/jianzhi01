@@ -5,7 +5,7 @@
 			<text class="colorF">日历</text>
 		</view>
 		<view class="flex1 alignCenter flex">
-			<input type="text" name="keyWords" class="search-input" placeholder="请输入关键字"/>
+			<input type="text" name="keyWords" class="search-input" placeholder="请输入关键字" disabled="{{!isInput}}"  bindtap="goSeach"/>
 		</view>
 		<view class="s-right flex alignCenter">
 			<text class="colorF">客服</text>

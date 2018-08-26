@@ -1,6 +1,6 @@
 <view class="box">
     <!-- 搜索 -->
-    <search></search>
+    <search isInput="{{false}}"></search>
     <!-- 搜索 -->
     <!-- 轮播图 -->
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
@@ -15,20 +15,8 @@
     <view class="my-int">
         <view class="my-int-text">我的兴趣</view>
         <view class="int-tag-box flex">
-            <view class="tag-item colorY">
-                登山1
-            </view>
-            <view class="tag-item colorY">
-                徒步2
-            </view>
-            <view class="tag-item colorY">
-                登山2
-            </view>
-            <view class="tag-item colorY">
-                登山3
-            </view>
-            <view class="tag-item colorY">
-                登山
+            <view class="tag-item colorY" wx:for="{{tag}}" data-id="{{item.id}}" bindtap="goInt">
+                {{item.keywords}}
             </view>
         </view>
     </view>

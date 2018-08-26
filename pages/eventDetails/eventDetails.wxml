@@ -1,245 +1,204 @@
 <import src="../../wxParse/wxParse.wxml" />
 <veiw class="box">
-	<!-- 轮播图 -->
-	<swiper indicator-dots="{{indicatorDots}}"
-	  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
-	  <block wx:for="{{detail.imgs}}">
-	    <swiper-item class="swiper-item">
-	      <image src="{{item}}" class="slide-image" />
-	    </swiper-item>
-	  </block>
-	</swiper>
-	<!-- 轮播图 -->
-	<view class="dis-box">
-		<view class="active-name">{{detail.title}}
-			<!-- <text class="sub-active-name">色达净化之旅，走进藏传佛教之地</text> -->
-		</view>
-		<view class="active-price">活动费：¥{{detail.price}}/人</view>
-		<view class="morming-price">早鸟价：<text class="morming-price-num">¥{{detail.adv_price}}/人</text></view>
-		<veiw class="flex flex-bettewn alignCenter">
-			<view class="flex alignCenter">
-				<text class="grade-text">难度：</text>
-				<image src="{{diff > index ? '../../images/star-active.png':'../../images/star.png'}}" class="star" wx:for="{{maxDiff}}"/>
-			</view>
-			<view class="flex alignCenter">
-				<text class="go-num-text">有{{detail.people_num}}人去过</text>
-				<view class="collect-btn colorF bgY flex alignCenter"> 
-					<image src="../../images/star.png" class="star"/>
-					<text class="go-num-text">收藏</text>
-				</view>
-			</view>
-		</veiw>
-	</view>
-	<!-- 报名 -->
-	<view class="book-list-box">
-		<view class="flex flex-bettewn book-list-item {{index%2==1?'borderY':''}}" wx:for="{{list}}">
-			<view class="book-title">
-				1队已报名20人/<text class="book-sub-title">1人成行{{index}} </text> 
-			</view>
-			<view class="book-title flex">
-				剩余0名额<text class="book-sub-title mr">/限20人 </text> 
-				<view class="man">满</view>
-			</view>
-		</view>	
-
-		<scroll-view 
-						class="scroll"
-						scroll-x
-						
-					>
-					<view class="scroll-box flex">
-					   <view class="flexa" wx:for="{{list02}}" bindtap="goNameList">
-					   		<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" 
-					      class="scroll-img"
-					      
-					      />
-					      <view class="flex-name">小刺刺</view>
-					   	</view>
-					   </view>
-		 </scroll-view>
-
-
-	</view>
-	<!-- 报名 -->
-	<view class="line"></view>
-	<!-- 活动时间 -->
-	<view class="acitve-time-box">
-		<view class="active-title">
-			活动时间：
-		</view>
-		<view class="flex">
-			<view class="active-big-btn flex1" wx:for="{{detail.time_team}}">
-				<view class="active-content {{index === 0?'bgY':'bgG'}}" >
-					<view class="big-btn-time">{{item.start_time}}-{{item.end_time}}</view>
-					<view class="big-btn-text">报名中|剩{{item.diff_num}}名额 </view>
-				</view>
-			</view>
-			<!-- <view class="active-big-btn flex1 ">
-				<view class="active-content bgG">
-					<view class="big-btn-time">2018/06/16-2018/06/23</view>
-					<view class="big-btn-text">报名中|剩12名额 </view>
-				</view>
-			</view> -->
-		</view>
-		<view class="active-address-box flex">
-			<view class="address-icon-box">
-				<image src="../../images/address-icon.png" class="address-icon"/>
-			</view>
-			<view class="flex1 address-text">
-				   集合地点：{{detail.set_dress}}
-			</view>
-		</view>
-		<view class="active-address-box ">
-			<view class="wxParse">
-			    <template is="wxParse" data="{{wxParseData:route.nodes}}"/>
-			</view>
-		</view>
-	</view>
-	<!-- 活动时间 -->
-	<!-- tab -->
-	<veiw class="tab-box flex">
-		<veiw class="tab-item  flex1">
-			活动详情
-		</veiw>
-		<veiw class="tab-item flex1">
-			行程准备
-		</veiw>
-		<veiw class="tab-item flex1">
-			费用说明
-		</veiw>
-		<veiw class="tab-item flex1 active">
-			评价
-		</veiw>
-	</veiw>
-	<!-- tab -->
-	<!-- rate -->
-	<view class="rate-box">
-		<view class="rate-num-box flex alignCenter">
-			<view>
-				<text class="rate-num-text">10</text>
-			</view>
-			<view class="rate-star-box flex1">
-				<view class="rate-star-img-box">
-					<image src="../../images/star-active.png" class="rate-star-icon" wx:for=""list/>
-				</view>
-				<view class="rate-p">共2个点评  好评率100% </view>
-			</view>
-		</view>
-
-	</view>
-	<!-- rate -->
-	<!-- 活动详情 -->
-	<view class="active-detail-box">
-		<view class="acitve-detail-banner-box">
-			<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="acitve-detail-banner"/>
-			<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="acitve-detail-banner"/>
-		</view>
-		<view class="active-detail-dis-box">
-			<view class="active-detail-dis">
-				集合日：今天是集合日，时间自由安排. 
-			</view>
-			<view class="active-detail-dis">
-				 day1：成都-丹巴 
-			</view>
-			<view class="active-detail-dis">
-				早上8点早餐过后酒店大厅集合...... 
-			</view>
-		</view>
-	</view>
-	<!-- 活动详情 -->
-	<!-- 评论列表 -->
-	<view class="rate-list" wx:for="{{list}}" wx:if="{{false}}">
-		<!-- 头部 -->
-		<view class="rate-top flex alignCenter flex-bettewn">
-			<view class="flex alignCenter">
-				<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="rate-avatar"/>
-				<view>
-					<view class="rate-name">小小刺</view>
-					<view class="rate-name">2018-03-20  </view>
-				</view>
-			</view>
-			<view>
-				<image src="../../images/star-active.png" class="rate-star-icon" wx:for="{{list}}"/>
-			</view>
-		</view>
-		<!-- 头部 -->
-		<view class="rate-aside">#色达之旅 </view>
-		<view class="flex">
-			<view class="bgY colorF tag-btn">深度体验</view>
-			<view class="bgY colorF tag-btn">贴心周到</view>
-		</view>
-		<view class='tag-dis'>
-			终于圆了长久以来的色达梦，健狼领队暖男一枚， 非常有担当，感谢他在我走不动时给我背了包。 
-		</view>
-	</view>
-	<!-- 评论列表 -->
-	<!-- 活动推荐 -->
-	<view class="activityRe-box">
-		<view class="activityRe-title">活动推荐:</view>
-		<view class="activityRe-item flex" wx:for="{{detail.recom_list}}">
-			<view class="">
-				<image src="{{item.cover}}" class="activeRe-img"/>
-			</view>
-			<view class="flex1 flex flex-column flex-bettewn">
-				<view class="activeRe-name">{{item.title}}</view>
-				<view class="activeRe-time flex flex-bettewn">
-					<view>集合日{{item.start_time}}</view>
-					<view>{{item.people_num}}人去过</view>
-				</view>
-			</view>
-		</view>
-	</view>
-	<!-- 活动推荐 -->
+    <!-- 轮播图 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+        <block wx:for="{{detail.imgs}}">
+            <swiper-item class="swiper-item">
+                <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 轮播图 -->
+    <view class="dis-box">
+        <view class="active-name">{{detail.title}}
+            <!-- <text class="sub-active-name">色达净化之旅，走进藏传佛教之地</text> -->
+        </view>
+        <view class="active-price">活动费：¥{{detail.price}}/人</view>
+        <view class="morming-price">早鸟价：
+            <text class="morming-price-num">¥{{detail.adv_price}}/人</text>
+        </view>
+        <veiw class="flex flex-bettewn alignCenter">
+            <view class="flex alignCenter">
+                <text class="grade-text">难度：</text>
+                <image src="{{diff > index ? '../../images/star-active.png':'../../images/star.png'}}" class="star" wx:for="{{maxDiff}}" />
+            </view>
+            <view class="flex alignCenter">
+                <text class="go-num-text">有{{detail.people_num}}人去过</text>
+                <view class="collect-btn colorF bgY flex alignCenter">
+                    <image src="../../images/star.png" class="star" />
+                    <text class="go-num-text">收藏</text>
+                </view>
+            </view>
+        </veiw>
+    </view>
+    <!-- 报名 -->
+    <view class="book-list-box">
+        <!-- 对列表 -->
+        <view class="flex flex-bettewn book-list-item {{index%2==1?'borderY':''}}" wx:for="{{leadList}}">
+            <view class="book-title">
+                {{item.team_name}}已报名{{item.now_num}}人/
+                <text class="book-sub-title">1人成行 </text>
+            </view>
+            <view class="book-title flex">
+                剩余{{item.people_max - item.now_num }}名额
+                <text class="book-sub-title mr">/限{{item.people_max}}人 </text>
+                <view class="man">
+                    <text wx:if="{{item.is_full == 0}}">满</text>
+                </view>
+            </view>
+        </view>
+        <!-- 对列表 -->
+        <scroll-view class="scroll" scroll-x>
+            <view class="scroll-box flex">
+                <view class="flexa" wx:for="{{list02}}" bindtap="goNameList">
+                    <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="scroll-img" />
+                    <view class="flex-name">小刺刺</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 报名 -->
+    <view class="line"></view>
+    <!-- 活动时间 -->
+    <view class="acitve-time-box">
+        <view class="active-title">
+            活动时间：
+        </view>
+        <view class="flex">
+            <view class="active-big-btn flex1" wx:for="{{detail.time_team}}">
+                <view class="active-content {{index === 0?'bgY':'bgG'}}">
+                    <view class="big-btn-time">{{item.start_time}}-{{item.end_time}}</view>
+                    <view class="big-btn-text">报名中|剩{{item.diff_num}}名额 </view>
+                </view>
+            </view>
+        </view>
+        <view class="active-address-box flex">
+            <view class="address-icon-box">
+                <image src="../../images/address-icon.png" class="address-icon" />
+            </view>
+            <view class="flex1 address-text">
+                集合地点：{{detail.set_dress}}
+            </view>
+        </view>
+        <view class="active-address-box ">
+            <view class="wxParse">
+                <template is="wxParse" data="{{wxParseData:route.nodes}}" />
+            </view>
+        </view>
+    </view>
+    <!-- 活动时间 -->
+    <!-- tab -->
+    <veiw class="tab-box flex">
+        <veiw class="tab-item  flex1 {{tabIndex == index? 'active':''}}" wx:for="{{tabs}}" wx:key="{{index}}" bindtap="changeTab" data-id="{{index}}">
+            {{item.name}}
+        </veiw>
+    </veiw>
+    <!-- tab -->
+    <!-- rate -->
+    <view class="rate-box" wx:if="{{tabIndex == 3}}">
+        <view class="rate-num-box flex alignCenter" >
+            <view>
+                <text class="rate-num-text">{{activeRate.length}}</text>
+            </view>
+            <view class="rate-star-box flex1">
+                <view class="rate-star-img-box">
+                    <image src="../../images/star-active.png" class="rate-star-icon" wx:for="lsit"/>
+                </view>
+                <view class="rate-p">共{{activeRate.length}}个点评 好评率100% </view>
+            </view>
+        </view>
+        <!-- 评论列表 -->
+        <view class="rate-list" wx:for="{{activeRate}}">
+            <!-- 头部 -->
+            <view class="rate-top flex alignCenter flex-bettewn">
+                <view class="flex alignCenter">
+                    <image src="{{item.heardimg}}" class="rate-avatar" />
+                    <view>
+                        <view class="rate-name">{{item.nickname}}</view>
+                        <view class="rate-name">{{item.create_time}}</view>
+                    </view>
+                </view>
+                <view>
+                    <image src="../../images/star-active.png" class="rate-star-icon" wx:for="{{item.star}}" />
+                </view>
+            </view>
+            <!-- 头部 -->
+            <view class="rate-aside">#色达之旅 </view>
+            <view class="flex">
+                <view class="bgY colorF tag-btn">深度体验</view>
+                <view class="bgY colorF tag-btn">贴心周到</view>
+            </view>
+            <view class='tag-dis'>
+                {{item.content}}
+            </view>
+        </view>
+        <!-- 评论列表 -->
+       
+    </view>
+    <!-- rate -->
+    <!-- 开发中 -->
+    <view class="active-detail-box" wx:if="{{tabIndex == 1 || tabIndex == 2}}" style="font-size:30rpx;text-align: center;">
+        开发中。。。。
+    </view>
+    <!-- 开发中 -->
+    <!-- 活动详情 -->
+    <view class="active-detail-box" wx:if="{{tabIndex == 0}}">
+        <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:rate.nodes}}" />
+        </view>
+    </view>
+    <!-- 活动详情 -->
+    <!-- 活动推荐 -->
+    <view class="activityRe-box">
+        <view class="activityRe-title">活动推荐:</view>
+        <view class="activityRe-item flex" wx:for="{{detail.recom_list}}">
+            <view class="">
+                <image src="{{item.cover}}" class="activeRe-img" />
+            </view>
+            <view class="flex1 flex flex-column flex-bettewn">
+                <view class="activeRe-name">{{item.title}}</view>
+                <view class="activeRe-time flex flex-bettewn">
+                    <view>集合日{{item.start_time}}</view>
+                    <view>{{item.people_num}}人去过</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 活动推荐 -->
 </veiw>
-
-
-
 <!-- 底部按钮 -->
 <view class="bottom-btn-box flex alignCenter">
-	<view class="bottom-btn-item">
-		<image src="../../images/home.png" class="bottom-btn-icon"/>
-		<view class="bottom-btn-text">首页</view>
-	</view>
-	<view class="bottom-btn-item">
-		<image src="../../images/person.png" class="bottom-btn-icon"/>
-		<view class="bottom-btn-text">进咨询群</view>
-	</view>
-	<view class="bottom-btn-item">
-		<image src="../../images/share-active-icon.png" class="bottom-btn-icon"/>
-		<view class="bottom-btn-text colorY">分享</view>
-	</view>
-	<view class="bottom-btn-item flex1 bgY bottom-right" bindtap="goBook">
-		<view class="now-book-text colorF">立即报名</view>
-		<view class="bottom-btn-text colorF">30天20时16分22秒后截止</view>
-	</view>
+    <view class="bottom-btn-item" bindtap="goHome">
+        <image src="../../images/home.png" class="bottom-btn-icon" />
+        <view class="bottom-btn-text">首页</view>
+    </view>
+    <view class="bottom-btn-item">
+        <image src="../../images/person.png" class="bottom-btn-icon" />
+        <view class="bottom-btn-text">进咨询群</view>
+    </view>
+    <button class="shareTBN" bindtap="share" open-type="share">
+        <image src="../../images/share-active-icon.png" class="bottom-btn-icon" />
+        <view class="bottom-btn-text colorY">分享</view>
+    </button>
+    <view class="bottom-btn-item flex1 bgY bottom-right" bindtap="goBook">
+        <view class="now-book-text colorF">立即报名</view>
+        <view class="bottom-btn-text colorF">30天20时16分22秒后截止</view>
+    </view>
 </view>
 <!-- 底部按钮 -->
-
 <!-- 报名弹出层 -->
 <view class="mask  flex-center alignCenter {{showMask?'flex':''}}">
-  <view class="mask-content bgF">
-  	<view class="tip">为了保证您的信息安全，请绑定手机号。</view>
-  	<view class="mask-btn flex flex-bettewn">
-  		<view class="confirm colorF m-btn bgY">前往绑定</view>
-  		<view class="confirm colorF m-btn bgG" bindtap="cancel">取消</view>
-  	</view>
-  </view>
+    <view class="mask-content bgF">
+        <view class="tip">为了保证您的信息安全，请绑定手机号。</view>
+        <view class="mask-btn flex flex-bettewn">
+            <view class="confirm colorF m-btn bgY">前往绑定</view>
+            <view class="confirm colorF m-btn bgG" bindtap="cancel">取消</view>
+        </view>
+    </view>
 </view>
 <!-- 报名弹出层 -->
-
-
-
-<scroll-view wx:if="{{false}}"
-				class="scroll"
-				scroll-x
-				
-			>
-			   <!-- <view class="flexa"> -->
-			   		<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" 
-			      class="scroll-img"
-			      wx:for="{{list02}}"
-			      />
-			   	<!-- </view> -->
- </scroll-view>
-
-
+<scroll-view wx:if="{{false}}" class="scroll" scroll-x>
+    <!-- <view class="flexa"> -->
+    <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="scroll-img" wx:for="{{list02}}" />
+    <!-- </view> -->
+</scroll-view>

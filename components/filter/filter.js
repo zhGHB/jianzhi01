@@ -4,12 +4,21 @@ Component({
     innerText: {
       type: String,
       value: 'default value',
+    },
+    cate: {
+      type: Array
     }
   },
   data: {
     // 这里是一些组件内部数据
     pickActive:false,
     tabIndex: 0,
+    tabs: [
+      {name:'所有活动'},
+      {name:'城市'},
+      {name:'活动天数'},
+      {name:'排序'},
+    ],
     price: [
       {name:'价格升序',id:0},
       {name:'价格降序',id:1},

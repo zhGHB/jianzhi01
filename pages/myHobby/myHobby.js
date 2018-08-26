@@ -1,4 +1,4 @@
-// pages/activitySearch/activitySearch.js
+// pages/myHobby/myHobby.js
 import api from '../../api/index.js';
 Page({
 
@@ -6,40 +6,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabs: []
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCate();
+    this.getAllIntTags();
   },
-  getCate() {
-    api.getCate().then((res)=>{
-      let tabs = [];
-      let firstObj = {
-        tabName: '推荐',
-        id: 0,
-        page: 0,
-        list: [],
-        click: true,
-        isMore: true
-      };
-      tabs.push(firstObj);
-      res.map((item,index)=>{
-        let obj = {};
-        obj.tabName = item.cate_name;
-        obj.id = item.id;
-        obj.list = [];
-        tabs.push(obj);
+  getAllIntTags() {
+    api.getAllIntTags().then((res)=> {
+      let list = res;
+      list.map((item,index)=> {
+        item.select = false;
       });
-      this.setData({
-        tabs
-      });
-    })
+      this.setData({list});
+    });
   },
-
+  choose(e) {
+    let Index = e.currentTarget.dataset.index;
+    let list = this.data.list;
+     list.map((item,index)=> {
+      if(index === Index) {
+        item.select = !item.select;
+      }
+    });
+    this.setData({list}) ;
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

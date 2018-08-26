@@ -5,43 +5,47 @@
 		</veiw>	
 	</view>
 	<!-- 内容 -->
-	<view class="share-box">
-		<view class="circle-item item bgF" wx:for="list" bindtap="goDetail">
+	<view class="box-box">
+	<scroll-view class="share-box"  scroll-y bindscrolltolower="loadMore">
+		<view class="circle-item item bgF" wx:for="{{tabs[tabIndex].list}}" bindtap="goDetail">
 			<!-- 头部 -->
 			<viwe class="circle-item-top flex flex-bettewn">
 				<view class="flex alignCenter">
-					<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-avatar"/>	
+					<image src="{{item.heardimg}}" class="share-avatar"/>	
 					<view>
-						<view class="share-name">小小刺</view>
-						<view class="share-time">2018年5月21</view>
+						<view class="share-name">{{item.nickname}}</view>
+						<view class="share-time">{{item.create_time}}</view>
 					</view>
 				</view>
 				<view class="flex alignCenter">
-					<view class="watch-btn colorY">+ 关注</view>
+					<view class="watch-btn {{item.is_fans?'colorY borderY':''}}">+ 关注</view>
 				</view>
 			</viwe>
 			<!-- 头部 -->
-			<view class="share-title">贡嘎全线穿越成功 </view>
+			<view class="share-title">{{item.title}} </view>
 			<!-- 四张加share-img-box -->
-			<view class="">
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>	
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="share-img02"/>
+			<view class="{{item.mood_img.length == 4?'share-img-box':''}}">
+				<image src="{{Item}}" class="{{mood_img.length>1?'share-img01':'share-img02'}}" wx:for="{{item.mood_img}}" wx:key="{{index}}" wx:for-item="Item"/>	
 			</view>
 			<!-- 底部 -->
 			<view class="share-bottom flex alignCenter">
 				<view class="flex flex-center alignCenter flex1">
-					<image src="../../images/message.png"  class="share-message"/><text class="colorY" style="margin-left: 10rpx;">4</text>
+					<image src="{{item.cm_count != 0?'../../images/message-chosen.png':'../../images/message.png'}}"  class="share-message"/><text class="colorY" wx:if="{{item.cm_count != 0}}"
+					style="margin-left: 10rpx;">{{item.cm_count}}</text>
 				</view>
 				<view class="flex flex-center alignCenter flex1">
-					<image src="../../images/heart1.png"  class="share-heart"/><text class="colorY" style="margin-left: 10rpx;">4</text>
+					<image 
+					  src="{{item.is_dz != 0?'../../images/heart1-chosen.png':'../../images/heart1.png'}}"   data-index="{{index}}"
+					  class="share-heart" catchtap="zan" data-id="{{item.id}}"/>
+					<text class="{{item.is_dz?'colorY':''}}" style="margin-left: 10rpx;" wx:if="{{item.dz_count != 0}}" 
+					catchtap="zan" data-id="{{item.id}}" data-index="{{index}}">{{item.dz_count}}
+					</text>
 				</view>
 			</view>
 			<!-- 底部 -->
 		</view>
-	</view>
+		<view class="no-more" wx:if="{{!tabs[0].isMore}}">没有更多了...</view>
+	</scroll-view>
+</view>
 	<!-- 内容 -->
 </view>

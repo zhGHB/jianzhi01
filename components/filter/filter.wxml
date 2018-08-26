@@ -1,24 +1,41 @@
 <!-- tab -->
 <view class="tab-box flex">
-	<view class="flex1 alignCenter flex-center flex {{tabIndex == 0?'active':''}}" bindtap="filter" data-id="0">
-		<text class="tab-text" >所有活动</text>
+	<view class="flex1 alignCenter flex-center flex {{tabIndex == index?'active':''}}" 
+	wx:for="{{tabs}}" wx:key="{{index}}"
+	bindtap="filter" data-id="{{index}}">
+		<text class="tab-text" >{{item.name}}</text>
+		<image src="{{tabIndex == index?'../../images/arrow-down-red.png':'../../images/arrow-down-black.png'}}" class="down-img {{pickActive && tabIndex == index?'rote':''}}"/>
 	</view>
-	<view class="flex1 alignCenter flex-center flex {{tabIndex == 1?'active':''}}" bindtap="filter" data-id="1">
-		<text class="tab-text">城市</text>
-	</view>
-	<view class="flex1 alignCenter flex-center flex {{tabIndex == 2?'active':''}}" bindtap="filter" data-id="2">
-		<text class="tab-text">活动天数</text>
-	</view>
-	<view class="flex1 alignCenter flex-center flex {{tabIndex == 3?'active':''}}" bindtap="filter" data-id="3">
-		<text class="tab-text">排序</text>
-	</view>
+	
 </view>
 <!-- tab -->
+<!-- 内容 -->
+<view class="content">
+	<view class="content-item {{index%2==0?'lf':'rt'}}" wx:for="list" wx:key="{{index}}">
+		<image src="http://img0.imgtn.bdimg.com/it/u=3287340089,3111881477&fm=27&gp=0.jpg" class="cover"/>
+		<view class="name">【端午特别期】1212</view>
+		<view class="price colorY">早鸟价：¥2880</view>
+	</view>
+</view>
+	<!-- 内容 -->
 <view class="pick-box {{pickActive?'active':''}}">
 	<view class="btn-box flex flex-bettewn">
 		<view bindtap="cancel">取消</view>
 		<view class="confirm" bindtap="confirm">确认</view>
 	</view>
+	<!-- 分类 -->
+	<view class="price-box pick-item-box" wx:if="{{tabIndex == 0}}">
+		<picker-view indicator-style="height: 50px;" class="picker-style" 
+		         value="{{value}}" bindchange="bindChangePrice"
+		  >
+		    <picker-view-column>
+		      <view wx:for="{{cate}}" style="line-height: 50px" class="picker-item">
+		      		<text class="item-text">{{item.tabName}}</text>
+		      </view>
+		    </picker-view-column>
+		  </picker-view>
+	</view>
+	<!-- 分类 -->
 	<!-- 价格排序 -->
 	<view class="price-box pick-item-box" wx:if="{{tabIndex == 3}}">
 		<picker-view indicator-style="height: 50px;" class="picker-style" 

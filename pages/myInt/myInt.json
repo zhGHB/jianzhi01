@@ -1,5 +1,5 @@
 {
-	"navigationBarTitleText": "活动搜索",
+	"navigationBarTitleText": "我的兴趣",
 	"usingComponents": {
 	    "filter": "/components/filter/filter",
 	    "search": "/components/search/search"

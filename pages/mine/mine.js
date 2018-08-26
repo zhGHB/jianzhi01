@@ -12,9 +12,9 @@ Page({
         {name:'我的钱包',path:'../myPurse/myPurse',iconUrl:''},
         {name:'联系客服',path:'../customMade/customMade',iconUrl:''},
         {name:'帮助中心',path:'',iconUrl:''},
-        {name:'关于我们',path:'',iconUrl:''},
-        {name:'领队工作台',path:'',iconUrl:''},
-        {name:'销售工作台 ',path:'',iconUrl:''}
+        {name:'关于我们',path:'../customMade/customMade ',iconUrl:''},
+        {name:'领队工作台',path:'../leadPaltform/leadPaltform',iconUrl:''},
+        {name:'销售工作台 ',path:'../leadPaltform/leadPaltform?isXiaoshou=true',iconUrl:''}
      ]
   },
 

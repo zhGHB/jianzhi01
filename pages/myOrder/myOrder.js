@@ -1,18 +1,41 @@
 // pages/myOrder/myOrder.js
+import api from '../../api/index.js';
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [1,2,3,4]
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getOrder(); 
+  },
+  getOrder() {
+    api.myOrder({user_id: app.globalData.userID}).then((res)=> {
+      let list = res;
+      list.map((item,index)=> {
+        item.show = false;
+      })
+      this.setData({list:res});
+    })
+  },
+  showDetail(e) {
+    let Index = e.currentTarget.dataset.index;
+    let list = this.data.list;
+    list.map((item,index)=> {
+      if(index == Index) {
+        item.show = !item.show;
+      }else {
+        item.show = false;
+      }
+    });
+    this.setData({list});
   },
   goRate() {
     wx.navigateTo({

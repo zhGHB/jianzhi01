@@ -1,23 +1,44 @@
 // pages/share/share.js
+let app = getApp();
+import api from '../../api/index.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [1,2,3,4],
     tabs: [
-      {name:'分享圈',id: 0},
-      {name: '已关注', id: 1}
+      {name:'分享圈',id: 0,page: 1,list: [],isMore: true},
+      {name: '已关注', id: 1,page: 1,list: [],isMore: true}
     ],
-    tabIndex: 0
+    tabIndex: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getShareList(0);
+    this.getShareList(1);
+  },
+  getShareList(index) {
+    let tabs = this.data.tabs;
+    if(!tabs[index].isMore) return;
+    let user_id = app.globalData.userID;
+    let page = tabs[index].page;
+    let param = {
+      user_id,page
+    };
+    api.getShareList(param,index).then((res)=> {
+      if(res.length < 10) {
+        tabs[index].isMore = false;
+      };
+      tabs[index].page++;
+      tabs[index].list = [...tabs[index].list,...res];
+      this.setData({
+        tabs
+      })
+    });
   },
   changeTab(e) {
     let id = e.target.id;
@@ -27,6 +48,19 @@ Page({
     wx.navigateTo({
      url:'../rate/rate',
     })
+  },
+  loadMore() {
+      this.data.tabIndex === 0 ?this.getShareList(0):this.getShareList(1);
+  },
+  zan(e) {
+    let id = e.currentTarget.dataset.id;
+    let index = e.currentTarget.dataset.index;
+    let user_id = app.globalData.userID;
+    api.zan({user_id, id}).then((res)=> {
+        let tabs = this.data.tabs;
+        tabs[this.data.tabIndex].list[index].is_dz = 1;
+        this.setData({tabs});
+    });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

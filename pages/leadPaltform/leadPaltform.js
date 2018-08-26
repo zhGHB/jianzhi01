@@ -1,43 +1,23 @@
-// pages/activitySearch/activitySearch.js
-import api from '../../api/index.js';
+// pages/leadPaltform/leadPaltform.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabs: []
+    item: [
+       {name:'账单',path:'../myOrder/myOrder',iconUrl:'../../images/icon1.png'},
+       {name:'总资产',path:'../myCollection/myCollection',iconUrl:'../../images/icon2.png'}
+    ],
+    isXiaoshou: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCate();
-  },
-  getCate() {
-    api.getCate().then((res)=>{
-      let tabs = [];
-      let firstObj = {
-        tabName: '推荐',
-        id: 0,
-        page: 0,
-        list: [],
-        click: true,
-        isMore: true
-      };
-      tabs.push(firstObj);
-      res.map((item,index)=>{
-        let obj = {};
-        obj.tabName = item.cate_name;
-        obj.id = item.id;
-        obj.list = [];
-        tabs.push(obj);
-      });
-      this.setData({
-        tabs
-      });
-    })
+   options.isXiaoshou && this.setData({isXiaoshou: options.isXiaoshou});
+
   },
 
   /**

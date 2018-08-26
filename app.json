@@ -1,7 +1,11 @@
 {
     "pages": [
-      
         "pages/activey/activey",
+        "pages/myInt/myInt",
+        "pages/addContact/addContact",
+        "pages/myHobby/myHobby",
+        "pages/bindPhone/bindPhone",
+        "pages/leadPaltform/leadPaltform",
         "pages/index/index",
         "pages/myCollection/myCollection",
         "pages/eventDetails/eventDetails",
@@ -24,7 +28,7 @@
         "pages/VIPInfo/VIPInfo",
         "pages/setting/setting",
         "pages/myPurse/myPurse",
-        "pages/addContact/addContact",
+        
         "pages/myOrder/myOrder",
         "pages/orderConfirmation/orderConfirmation",
         "pages/withdraw/withdraw",

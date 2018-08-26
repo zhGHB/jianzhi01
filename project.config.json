@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -73,9 +73,63 @@
 				},
 				{
 					"id": 6,
+					"name": "1",
+					"pathName": "pages/eventDetails/eventDetails",
+					"query": "id=9"
+				},
+				{
+					"id": 7,
 					"name": "12",
 					"pathName": "pages/eventDetails/eventDetails",
 					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "12",
+					"pathName": "pages/myHobby/myHobby",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "122",
+					"pathName": "pages/myOrder/myOrder",
+					"query": "id=1"
+				},
+				{
+					"id": 10,
+					"name": "212",
+					"pathName": "pages/eventDetails/eventDetails",
+					"query": "id=3"
+				},
+				{
+					"id": -1,
+					"name": "212",
+					"pathName": "pages/orderConfirmation/orderConfirmation",
+					"query": "id=3"
+				},
+				{
+					"id": -1,
+					"name": "3",
+					"pathName": "pages/activitySearch/activitySearch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "3",
+					"pathName": "pages/activitySearch/activitySearch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "3",
+					"pathName": "pages/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "3",
+					"pathName": "pages/share/share",
+					"query": ""
 				}
 			]
 		}

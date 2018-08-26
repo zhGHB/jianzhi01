@@ -1,0 +1,31 @@
+/* pages/bindPhone/bindPhone.wxss */
+page {
+	background: #F5EFEF;
+}
+.top {
+	text-align: center;
+	margin-top: 40rpx;
+}
+.bind-title {
+	font-size:60rpx;
+}
+.bind-sub-title {
+	font-size:30rpx;
+}
+.item-title {
+	font-size:30rpx;width: 100rpx;
+}
+.item {
+	border-bottom: 1px solid #000;margin-left: 30rpx;margin-right: 40rpx;
+	padding-top: 20rpx;
+}
+.item-input {
+	font-size:30rpx;
+}
+.send-btn {
+	color:#fff;font-size:34rpx;padding:2rpx 10rpx;border-radius: 8rpx;
+}
+.confirm {
+	font-size:40rpx;border-radius: 8rpx;
+	padding:10rpx 40rpx;margin-top: 40rpx;
+}

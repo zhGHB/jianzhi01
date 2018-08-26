@@ -45,5 +45,17 @@ page {
 	padding:8rpx 20rpx;margin-top: 14rpx;margin-bottom: 14rpx;
 }
 .arrow-down {
-	width:26rpx;height: 20rpx;
+	width:26rpx;height: 20rpx;transition: all 1s;
+}
+.rote {
+	transform: rotate(-90deg);
+}
+.info-box {
+	font-size:30rpx;background: #ccc;margin:20rpx;border-radius: 10rpx;margin-bottom: 0;
+	transition:  height 1s;overflow: hidden;padding-left: 20rpx;padding-right: 20rpx;
+	height: 360rpx;
+}
+.h {
+	height: 0;
+	/*transition:  all 1s;*/
 }
