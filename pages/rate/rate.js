@@ -1,20 +1,27 @@
 // pages/rate/rate.js
+import api from '../../api/index.js';
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
-  },
+    detail: [] 
+  },  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getDetail(options.id); 
   },
-
+  getDetail(id) {
+    let user_id = app.globalData.userID;
+    api.shareDetail({user_id,id}).then((res)=> {
+      this.setData({detail: res});
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

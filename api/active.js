@@ -25,3 +25,6 @@ export function getIntTag(params) {
 export function orderScan(params) {
 	return ajax("order/prive_order",1,params);
 }
+export function collect(params) {
+	return ajax("active/add_collect",1,params);
+}

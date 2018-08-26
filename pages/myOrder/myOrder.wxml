@@ -62,3 +62,4 @@
 		</view>
 	</view>
 </view>
+<view style="font-size:28rpx;text-align: center;" wx:if="{{list.length == 0}}">暂无订单</view>

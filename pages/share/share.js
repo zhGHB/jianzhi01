@@ -44,9 +44,10 @@ Page({
     let id = e.target.id;
     this.setData({tabIndex: parseInt(id)})
   },
-  goDetail() {
+  goDetail(e) {
+    let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-     url:'../rate/rate',
+     url:'../rate/rate?id=' + id,
     })
   },
   loadMore() {

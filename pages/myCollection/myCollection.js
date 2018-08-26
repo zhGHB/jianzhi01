@@ -1,20 +1,34 @@
 // pages/myCollection/myCollection.js
+import api from '../../api/index.js';
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    list: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.collectList();
   },
-
+  collectList() {
+    let user_id = app.globalData.userID;
+    api.collectList({user_id}).then((res)=> {
+      this.setData({list: res});
+    })
+  },
+  delete(e) {
+    console.log(e);
+    let id = e.currentTarget.dataset.id;
+    api.collectDelete({id}).then((res)=> {
+      this.collectList();
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

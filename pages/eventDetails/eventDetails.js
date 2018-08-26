@@ -1,6 +1,6 @@
 
 import api from '../../api/index.js';
-
+let app = getApp();
 // const WxParse = require('../../wxParse/wxParse.js');
 // import {WxParse} from '../../wxParse/wxParse.js'
 var WxParse = require('../../wxParse/wxParse.js');
@@ -41,6 +41,13 @@ Page({
         this.getDatail(id);
         this.getActiveLead(id);
         this.getActiveRate(id);
+    },
+    collect() {
+      let active_id = this.data.id;
+      let user_id = app.globalData.userID;
+      api.collect({active_id,user_id}).then((res)=>{
+        
+      })
     },
     changeTab(e) {
       let id= e.currentTarget.dataset.id;

@@ -24,7 +24,7 @@
             </view>
             <view class="flex alignCenter">
                 <text class="go-num-text">有{{detail.people_num}}人去过</text>
-                <view class="collect-btn colorF bgY flex alignCenter">
+                <view class="collect-btn colorF bgY flex alignCenter" bindtap="collect">
                     <image src="../../images/star.png" class="star" />
                     <text class="go-num-text">收藏</text>
                 </view>

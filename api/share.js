@@ -10,3 +10,6 @@ export function getShareList(params,index) {
 export function zan(params) {
 	return ajax("/share/sdz",1,params);
 }
+export function  shareDetail(params) {
+	return ajax("share/detail",1,params);
+}

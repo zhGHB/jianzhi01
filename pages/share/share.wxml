@@ -7,7 +7,7 @@
 	<!-- 内容 -->
 	<view class="box-box">
 	<scroll-view class="share-box"  scroll-y bindscrolltolower="loadMore">
-		<view class="circle-item item bgF" wx:for="{{tabs[tabIndex].list}}" bindtap="goDetail">
+		<view class="circle-item item bgF" wx:for="{{tabs[tabIndex].list}}" bindtap="goDetail" data-id="{{item.id}}">
 			<!-- 头部 -->
 			<viwe class="circle-item-top flex flex-bettewn">
 				<view class="flex alignCenter">

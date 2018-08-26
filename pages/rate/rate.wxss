@@ -15,8 +15,11 @@ page {
 	font-size:24rpx;color:#A0A0A0;font-weight: 100;
 }
 .top-btn {
-	border:1px solid #EA5504;color:#EA5504;border-radius: 4rpx;font-size:24rpx;
-	font-weight: 100;padding:10rpx 15rpx;
+	border-radius: 4rpx;font-size:24rpx;
+	font-weight: 100;padding:10rpx 15rpx;border:1px solid #000;
+}
+.top-btn-active {
+	border:1px solid #EA5504;color:#EA5504;
 }
 .title {
 	font-size:30rpx;color:#000;font-weight: 100;
