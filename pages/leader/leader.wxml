@@ -1,10 +1,11 @@
 
 <view class="box">
 	<view class="input-box flex alignCenter">
-		<input class="search-input flex1" placeholder="搜索 领队网名/会员号"/>
+		<input class="search-input flex1" placeholder="搜索 领队网名/会员号" bindinput="bindKeyInput"
+		confirm-type="search"  bindconfirm="search"/>
 	</view>
 	<!-- 内容 -->
-	<view class="item flex" wx:for="list" bindtap="goDetail">
+	<view class="item flex" wx:for="{{list}}" bindtap="goDetail">
 		<view class="item-left flex alignCenter">
 			<image src="../../images/1.png" class="one"/>
 		</view>
@@ -50,5 +51,6 @@
 		</view>
 		<!-- 左边 -->
 	</view>
+	<view style="font-size:30rpx;text-align: center;" wx:if="{{list.length === 0}}">暂无数据...</view>
 	<!-- 内容 -->
 </view>

@@ -7,8 +7,8 @@
 				登 录
 			</view>
 			<view class="user-info-box">
-				<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar"/>
-				<view class="user-name">小小小小刺</view>
+				<image src="{{userInfo.avatarUrl}}" class="avatar"/>
+				<view class="user-name">{{userInfo.nickName}}</view>
 				<view class="user-count">会员号：880880</view>
 			</view>
 		</view>

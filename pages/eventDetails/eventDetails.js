@@ -33,7 +33,8 @@ Page({
         diff: 0,
         maxDiff: 5,
         leadList: [],
-        activeRate: []
+        activeRate: [],
+        myCollect: false
     },
     onLoad: function(options) {
         let id = options.id;
@@ -46,7 +47,7 @@ Page({
       let active_id = this.data.id;
       let user_id = app.globalData.userID;
       api.collect({active_id,user_id}).then((res)=>{
-        
+        this.setData({myCollect: true})
       })
     },
     changeTab(e) {
@@ -91,7 +92,7 @@ Page({
     // 取消
     goNameList() {
         wx.navigateTo({
-         url:'../nameList/nameList',
+         url:`../nameList/nameList?active_id=${this.data.id}&team_id=3`,
         })
     },
     goHome() {

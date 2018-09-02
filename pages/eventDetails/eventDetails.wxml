@@ -24,7 +24,7 @@
             </view>
             <view class="flex alignCenter">
                 <text class="go-num-text">有{{detail.people_num}}人去过</text>
-                <view class="collect-btn colorF bgY flex alignCenter" bindtap="collect">
+                <view class="collect-btn colorF {{myCollect?'bgY':'bgG'}} flex alignCenter" bindtap="collect">
                     <image src="../../images/star.png" class="star" />
                     <text class="go-num-text">收藏</text>
                 </view>
@@ -43,7 +43,7 @@
                 剩余{{item.people_max - item.now_num }}名额
                 <text class="book-sub-title mr">/限{{item.people_max}}人 </text>
                 <view class="man">
-                    <text wx:if="{{item.is_full == 0}}">满</text>
+                    <text wx:if="{{item.is_full == 1}}">满</text>
                 </view>
             </view>
         </view>

@@ -1,20 +1,80 @@
 // pages/bindPhone/bindPhone.js
+let timer = null;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    phone: null,
+    code:'',
+    getCodeClick: true,
+    timeC: '',
+    timer: null,
+    allTime: 60,
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
   
   },
-
+  bindKeyInput(e) {
+    // if(e.detail.value.length > 11) return;
+    this.setData({phone: e.detail.value});
+  },
+  code(e) {
+     this.setData({code: e.detail.value});
+  },
+  confirm() {
+    if(!this.data.code || !this.data.phone) {
+      wx.showModal({
+          title: '提示',
+          content: '请填写完整信息',
+          success: function(res) {
+              if (res.confirm) {}
+          }
+      })
+      return;
+    };
+    wx.showModal({
+        title: '提示',
+        content: '绑定功能开发中',
+        success: function(res) {
+            if (res.confirm) {}
+        }
+    })
+  },
+  getCode() {
+    console.log(this.data.phone)
+    var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+    if (!myreg.test(this.data.phone)) {
+      wx.showModal({
+          title: '提示',
+          content: '请填写正确格式的手机号',
+          success: function(res) {
+              if (res.confirm) {}
+          }
+      })
+      return;
+    }
+    if(!this.data.getCodeClick) return;
+    this.setData({
+      getCodeClick:false,
+      timeC: this.data.allTime + 's'
+    });
+    let time = this.data.allTime;
+    timer = setInterval(() => {
+      time--;
+      this.setData({timeC: time + 's'});
+      if(time <= 0) {
+        this.setData({
+          getCodeClick: true
+        });
+        clearInterval(timer);
+      }
+    },1000);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -4,14 +4,14 @@
     		<view class="commen-font top-title">我的头像</view>
     	</view>
     	<view>
-    		<image src="https://img.alicdn.com/bao/uploaded/i1/3427511140/TB2wCXHDeSSBuNjy0FlXXbBpVXa_!!3427511140.jpg" class="avatar border-radius50%"/>
+    		<image src="{{userInfo.avatarUrl}}" class="avatar border-radius50%"/>
     	</view>
 	</view>
 	<!-- 头部结束 -->
 	<view class="item-box border-top">
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">昵称</view>
-		  <view class="commen-font">小小小小刺  </view>
+		  <view class="commen-font">{{userInfo.nickName}}</view>
 	   </view>
     </view>
         <view class="item-box border-top" bindtap="isGobindPhone" data-url="../bindPhone/bindPhone">
@@ -20,7 +20,7 @@
     		  <view class="commen-font" style="color:red">未绑定</view>
     	   </view>
         </view>
-    <view class="item-box border-top">
+    <view class="item-box border-top" bindtap="isGobindPhone">
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">封面</view>
 		  <view class="commen-font flex alignCenter">

@@ -1,18 +1,19 @@
 // pages/setting/setting.js
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    userInfo:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({userInfo: app.globalData.userInfo}) 
   },
 
   /**
@@ -23,7 +24,22 @@ Page({
   },
   isGobindPhone(e) {
     console.log(e);
-    let url = e.currentTarget.dataset.url;   
+    let url = e.currentTarget.dataset.url;  
+    console.log(url)
+    if(!url) {
+      wx.showModal({
+                  title: '提示',
+                  content: '开发中',
+                  success: function (res) {
+                      if (res.confirm) {
+                          console.log('用户点击确定')
+                      }else{
+                         console.log('用户点击取消')
+                      }
+
+                  }
+              })
+    } ;
     wx.navigateTo({
        url: url,
       })

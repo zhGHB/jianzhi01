@@ -8,4 +8,80 @@
     </view>
 </view>
 <!-- 我的兴趣 -->
-<filter></filter>
+<view class="box">
+    <!-- 搜索 -->
+    <!-- <search isInput="{{true}}"></search> -->
+    <!-- 搜索 -->
+    <!-- tab -->
+    <!-- <filter cate="{{tabs}}"></filter> -->
+    <!-- tab -->
+    <view class="tab-box flex">
+    	<view class="flex1 alignCenter flex-center flex {{tabIndex == index?'active':''}}" 
+    	wx:for="{{topTabs}}" wx:key="{{index}}" bindtap="filter" data-id="{{index}}">
+    		<text class="tab-text">{{item.name}}</text>
+    		<image src="{{tabIndex == index?'../../images/arrow-down-red.png':'../../images/arrow-down-black.png'}}" class="down-img {{pickActive && tabIndex == index?'rote':''}}"/>
+    	</view>
+    	
+    </view>
+    <!-- tab -->
+    <!-- 内容 -->
+    <view class="content">
+    	<view class="content-item {{index%2==0?'lf':'rt'}}" wx:for="{{list}}" wx:key="{{index}}" bindtap="goDetail" data-id="{{item.id}}">
+    		<image src="{{item.cover}}" class="cover"/>
+    		<view class="name">{{item.title}}</view>
+    		<view class="price colorY">早鸟价：¥{{item.adv_price}}</view>
+    	</view>
+    	<view style="font-size:30rpx;text-align: center;" wx:if="{{list.length === 0}}">没有搜索到数据</view>
+    </view>
+    	<!-- 内容 -->
+    <view class="pick-box {{pickActive?'active':''}}">
+    	<view class="btn-box flex flex-bettewn">
+    		<view bindtap="cancel">取消</view>
+    		<view class="confirm" bindtap="confirm">确认</view>
+    	</view>
+    	<!-- 分类 -->
+    	<view class="price-box pick-item-box" wx:if="{{tabIndex == 0}}">
+    		<picker-view indicator-style="height: 50px;" class="picker-style"  bindchange="bindChangeCate"
+    		  >
+    		    <picker-view-column>
+    		      <view wx:for="{{tabs}}" style="line-height: 50px" class="picker-item">
+    		      		<text class="item-text" data-id="{{item.id}}">{{item.tabName}}</text>
+    		      </view>
+    		    </picker-view-column>
+    		  </picker-view>
+    	</view>
+    	<!-- 分类 -->
+    	<!-- 城市 -->
+    	<view class="price-box pick-item-box" wx:if="{{tabIndex == 1}}" style="font-size:30rpx;text-align: center;">
+    		暂无城市数据
+    	</view>
+    	<!-- 城市 -->
+    	<!-- 活动天数 -->
+    	<view class="price-box pick-item-box" wx:if="{{tabIndex == 2}}">
+    		<picker-view indicator-style="height: 50px;" class="picker-style" 
+    		          bindchange="bindChangeDate"
+    		  >
+    		    <picker-view-column>
+    		      <view wx:for="{{cateDate}}" style="line-height: 50px" class="picker-item">
+    		      		<text class="item-text">{{item.name}}</text>
+    		      </view>
+    		    </picker-view-column>
+    		  </picker-view>
+    	</view>
+    	<!-- 活动天数 -->
+    	<!-- 价格排序 -->
+    	<view class="price-box pick-item-box" wx:if="{{tabIndex == 3}}">
+    		<picker-view indicator-style="height: 50px;" class="picker-style" 
+    		         value="{{value}}" bindchange="bindChangePrice"
+    		  >
+    		    <picker-view-column>
+    		      <view wx:for="{{price}}" style="line-height: 50px" class="picker-item">
+    		      		<text class="item-text">{{item.name}}</text>
+    		      </view>
+    		    </picker-view-column>
+    		  </picker-view>
+    	</view>
+    	<!-- 价格排序 -->
+    </view>
+    <!-- tab -->
+</view>

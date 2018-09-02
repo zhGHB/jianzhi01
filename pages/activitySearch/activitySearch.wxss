@@ -11,3 +11,65 @@
 /*搜索*/
 /*tab*/
 /*tab*/
+
+/* components/filter/filter.wxss */
+@import '../../app.wxss';
+.tab-box {
+	font-size:28rpx;color:#242424;font-weight: 400;border-bottom:1px solid #BFBFBF;
+	padding:20rpx 0;
+}
+.active {
+	color:#D65007;
+}
+.pick-box {
+	position: fixed;
+	bottom: -400rpx;
+	width:100%;height: 400rpx;
+	background: #fff;
+	transition: all 1s;
+}
+.pick-box.active {
+	bottom: 0;
+}
+.btn-box {
+	color:#717171;font-size:34rpx;padding:16rpx;
+}
+.confirm {
+	color:#EA5504;
+}
+.picker-style {
+	height: 300rpx;text-align: center;
+}
+.picker-item {
+	font-size:28rpx;color:#000;
+}
+.item-text {
+	border-bottom: 1px solid #EA5504;
+	display: inline-block;
+	height: 50rpx;line-height: 50rpx;padding:0 40rpx;
+}
+.down-img {
+	width:21rpx;height: 13rpx;
+	transition:  all 1s;
+}
+.rote {
+	transform: rotate(-90deg);
+}
+.content-item {
+	width:48%;margin-bottom: 20rpx;
+}
+.cover {
+	width: 100%;height: 221rpx;
+}
+.name {
+	font-size:24rpx;
+}
+.price {
+	font-size:22rpx;
+}
+.content {
+	margin:20rpx;
+}
+.tab-text {
+	font-size:30rpx;
+}

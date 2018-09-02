@@ -1,18 +1,24 @@
 // pages/nameList/nameList.js
+import api from '../../api/index.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [1,2]
+    list: [1,3]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getList({team_id: options.team_id, active_id: options.active_id}); 
+  },
+  getList(params) {
+    api.teamNum(params).then((res) => {
+      // this.setData({list: res});
+    });
   },
   goVIPInfo() {
     wx.navigateTo({

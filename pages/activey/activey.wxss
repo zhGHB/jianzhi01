@@ -1,6 +1,15 @@
 /* pages/activey/activey.wxss */
 
-
+@import '../../app.wxss';
+.search-box {
+	background: #D65007;height: 90rpx;
+}
+.s-left,.s-right {
+	font-size:34rpx;color:#FFFEFE;margin:0 30rpx;font-weight: 300
+}
+.search-input {
+	background: #fff;border-radius: 10rpx;width:100%;font-size:30rpx;padding-left: 20rpx;color:#000;
+}
 .slide-image {
 	width:100%;height: 300rpx;
 }

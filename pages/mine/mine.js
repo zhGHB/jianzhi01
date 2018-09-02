@@ -1,4 +1,5 @@
 // pages/mine/mine.js
+let app = getApp();
 Page({
 
   /**
@@ -15,14 +16,15 @@ Page({
         {name:'关于我们',path:'../customMade/customMade ',iconUrl:''},
         {name:'领队工作台',path:'../leadPaltform/leadPaltform',iconUrl:''},
         {name:'销售工作台 ',path:'../leadPaltform/leadPaltform?isXiaoshou=true',iconUrl:''}
-     ]
+     ],
+     userInfo: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({userInfo: app.globalData.userInfo})
   },
   goDetail(e) {
     let path = e.currentTarget.dataset.path;

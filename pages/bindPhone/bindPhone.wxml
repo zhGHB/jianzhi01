@@ -4,15 +4,15 @@
 </view>
 <view class="item flex alignCenter">
 	<view class="item-title">+86</view>
-	<input type="number" name="phone" class="item-input flex1" placeholder="请输入手机号" />
+	<input type="number" name="phone" class="item-input flex1" placeholder="请输入手机号" bindinput="bindKeyInput" maxlength='11' />
 </view>
 <view class="item flex alignCenter">
 	<view class="item-title">验证码</view>
-	<input type="number" name="phone" class="item-input flex1" placeholder="请输入手机号" />
-	<view class="send-btn bgY">发送验证码</view>
+	<input type="number" name="phone" class="item-input flex1" placeholder="请输入手机号" bindinput="code"/>
+	<view class="send-btn bgY" bindtap="getCode">{{getCodeClick?'发送验证码':timeC}}</view>
 </view>
 <view class="confirm-box flex flex-center">
-	<view class="confirm bgY colorF">
+	<view class="confirm bgY colorF" bindtap="confirm">
 		确认
 	</view>
 	</view>

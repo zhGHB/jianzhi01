@@ -17,6 +17,11 @@ Page({
   onLoad: function (options) {
     this.orderScan(options.id); 
   },
+  changC() {
+    wx.navigateTo({
+      url: '../addContact/addContact'
+    })
+  },
   orderScan(id) {
     let user_id = app.globalData.userID;
     api.orderScan({user_id,team_id:id}).then((res)=> {

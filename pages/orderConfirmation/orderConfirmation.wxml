@@ -11,7 +11,7 @@
 		</view>
 	</view>
 	
-		<view class="contact-box bgF padding flex">
+		<view class="contact-box bgF padding flex" bindtap="changC">
 			<view class="flex1">
 				<view class="contact-item">网名：{{info.nickname}}</view>
 				<view class="contact-item">手机号：{{info.mobile}}</view>

@@ -12,3 +12,10 @@ export function collectList(params) {
 export function collectDelete(params) {
 	return ajax("user/del_collect",1,params);
 }
+export function udateContact(params) {
+	return ajax('/user/update_contacts', 1, params);
+}
+export function getContact(params) {
+	return ajax('/user/get_contacts', 1, params);
+	// body...
+}

@@ -28,3 +28,9 @@ export function orderScan(params) {
 export function collect(params) {
 	return ajax("active/add_collect",1,params);
 }
+export function activeSearch(params) {
+	return ajax("/active/search_list", 1, params);
+}
+export function teamNum(params) {
+	return ajax('/active/get_team_people' ,1, params);
+}

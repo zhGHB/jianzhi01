@@ -1,23 +1,37 @@
 // pages/leader/leader.js
+import api from '../../api/index.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [1,2,3,4],
-    clist: [1,3]
+    list: [],
+    clist: [1,3],
+    keywords:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getList({keywords:''}); 
+  },
+  bindKeyInput(e) {
+    let keywords = e.detail.value;
+    this.setData({keywords}) 
+  },
+  search() {
+    this.getList({keywords: this.data.keywords});
   },
   goDetail() {
     wx.navigateTo({
      url:'../homepage/homepage',
+    })
+  },
+  getList(params = {}) {
+    api.hotLead(params).then((res) => {
+      this.setData({list: res});
     })
   },
   /**
