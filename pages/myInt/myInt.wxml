@@ -2,8 +2,8 @@
 <view class="my-int">
     <view class="my-int-text">我的兴趣</view>
     <view class="int-tag-box flex">
-        <view class="tag-item colorY" wx:for="tag" data-id="{{index}}">
-            活动
+        <view class="tag-item colorY" wx:for="{{tag}}" data-id="{{item.id}}">
+            {{item.keywords}}
         </view>
     </view>
 </view>
@@ -15,14 +15,21 @@
     <!-- tab -->
     <!-- <filter cate="{{tabs}}"></filter> -->
     <!-- tab -->
-    <view class="tab-box flex">
-    	<view class="flex1 alignCenter flex-center flex {{tabIndex == index?'active':''}}" 
-    	wx:for="{{topTabs}}" wx:key="{{index}}" bindtap="filter" data-id="{{index}}">
-    		<text class="tab-text">{{item.name}}</text>
-    		<image src="{{tabIndex == index?'../../images/arrow-down-red.png':'../../images/arrow-down-black.png'}}" class="down-img {{pickActive && tabIndex == index?'rote':''}}"/>
-    	</view>
-    	
-    </view>
+    <!-- tab -->
+       <view class="tab-box flex">
+        <view class="flex1 alignCenter flex-center flex {{tabIndex == index?'active':''}}" 
+        wx:for="{{topTabs}}" wx:key="{{index}}" bindtap="filter" data-id="{{index}}">
+            <text class="tab-text" wx:if="{{index !== 1}}">{{item.name}}</text>
+            <image src="{{tabIndex == index?'../../images/arrow-down-red.png':'../../images/arrow-down-black.png'}}" class="down-img {{pickActive && tabIndex == index?'rote':''}}" wx:if="{{index !== 1}}"/>
+               <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                 <view class="picker" wx:if="{{index === 1}}">
+                       城市
+                 </view>
+               </picker>
+        </view>
+        
+       </view>
+       <!-- tab -->
     <!-- tab -->
     <!-- 内容 -->
     <view class="content">

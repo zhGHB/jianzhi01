@@ -86,13 +86,13 @@ Page({
             sex: this.data.sex,
             user_id: app.globalData.userID
         };
-        wx.showModal({
-            title: '提示',
-            content: '服务器异常',
-            success: function(res) {
-                if (res.confirm) {}
-            }
-        });
+        // wx.showModal({
+        //     title: '提示',
+        //     content: '服务器异常',
+        //     success: function(res) {
+        //         if (res.confirm) {}
+        //     }
+        // });
         api.udateContact({...form,...parmas}).then((res) => {
             wx.showToast({
                 title: '成功',
@@ -101,7 +101,7 @@ Page({
             });
             setTimeout(()=> {
               wx.navigateBack();
-            },2000);
+            },1000);
         });
     },
     showToast() {

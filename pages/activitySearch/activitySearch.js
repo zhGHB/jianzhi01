@@ -25,7 +25,9 @@ Page({
             { name: '3-5天', id: 5 }
         ],
         title: '',
-        list: []
+        list: [],
+        region: ['广东省', '广州市', '海珠区'],
+        customItem: '全部'
     },
 
     /**
@@ -34,6 +36,15 @@ Page({
     onLoad: function(options) {
         this.getCate();
         this.goSeach();
+    },
+    bindRegionChange: function(e) {
+        console.log('picker发送选择改变，携带值为', e.detail.value);
+        let city = e.detail.value;
+        this.setData({
+            region: e.detail.value,
+            pickActive: false
+        });
+        this.search({ city: city[0] + city[1] });
     },
     calander() {
         wx.showModal({
@@ -50,14 +61,20 @@ Page({
         })
     },
     goDetail(e) {
-      let id = e.currentTarget.dataset.id;
-      wx.navigateTo({
-       url:`../eventDetails/eventDetails?id=${id}`,
-      })
+        let id = e.currentTarget.dataset.id;
+        wx.navigateTo({
+            url: `../eventDetails/eventDetails?id=${id}`,
+        })
     },
     filter(e) {
         console.log(e);
         let id = e.currentTarget.dataset.id;
+        if (id === 1) {
+            this.setData({
+                pickActive: false
+            });
+            return;
+        };
         this.setData({
             pickActive: true,
             tabIndex: id

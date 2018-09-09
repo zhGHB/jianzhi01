@@ -8,14 +8,15 @@ Page({
    */
   data: {
     info: {},
-    agree: false
+    agree: false,
+    id: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.orderScan(options.id); 
+    this.setData({id: options.id});
   },
   changC() {
     wx.navigateTo({
@@ -57,7 +58,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.orderScan(this.data.id); 
   },
 
   /**

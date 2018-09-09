@@ -13,7 +13,6 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.1.3",
 	"appid": "wx65cd51ea210cbe2a",
-	// "appid": "wxc9e46f64f7ea96e2",
 	"projectname": "tourism",
 	"isGameTourist": false,
 	"condition": {
@@ -34,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 34,
+			"current": 37,
 			"list": [
 				{
 					"id": -1,
@@ -245,6 +244,23 @@
 					"name": "12",
 					"pathName": "pages/setting/setting",
 					"query": "id=4"
+				},
+				{
+					"id": -1,
+					"name": "12",
+					"pathName": "pages/myHobby/myHobby",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "12",
+					"pathName": "pages/activitySearch/activitySearch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "12",
+					"pathName": "pages/myInt/myInt"
 				}
 			]
 		}

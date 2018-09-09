@@ -1,6 +1,8 @@
 {
     "pages": [
+        
         "pages/activey/activey",
+        "pages/calendar/calendar",
         "pages/myInt/myInt",
         "pages/addContact/addContact",
         "pages/myHobby/myHobby",
