@@ -1,0 +1,44 @@
+.calendar{
+	width: 100%;
+	background: #fff;
+}
+.calendar .tit{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 36rpx;
+	color: #2A2A2A;
+	/*padding: 40rpx 0;*/
+}
+.calendar .tit .current{
+	/*margin: 0 40rpx;*/
+}
+.abcBox {
+	/*height: 50rpx;*/
+	margin-top: 20rpx;
+	height: 80rpx;
+}
+.calendar .content{
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding-left: 25rpx;
+}
+.calendar .content view{
+	width: 100rpx;
+	/*height: 80rpx;*/
+	/*line-height: 80rpx;*/
+	text-align: center;
+	flex-shrink: 0;
+	/*font-size: 34rpx;*/
+	/*color: #2A2A2A;*/
+	/* background: rgb(224, 199, 199); */
+	/*margin: 14rpx 0;*/
+}
+.calendar .content .gray{
+	color: #999;
+}
+.chang {
+	font-size:24rpx;
+color:#f4aa81;
+}

@@ -34,3 +34,6 @@ export function activeSearch(params) {
 export function teamNum(params) {
 	return ajax('/active/get_team_people' ,1, params);
 }
+export function calendarList(params) {
+	return ajax("/active/get_calen_list", 1, params);
+}

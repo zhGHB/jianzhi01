@@ -31,7 +31,10 @@
     <view class="item-box border-top">
 	   <view class="item flex flex-bettewn bgF">
 		  <view class="commen-font">个人介绍</view>
-		  <view class="commen-font">在路上，不停歇</view>
+		  <view class="commen-font">
+		  	<input  placeholder="请输入个人介绍" class="into" focus bindinput="bindKeyInput"
+		  	bindblur="sub"/>
+		  </view>
 	   </view>
     </view>
     <view class="item-box border-top" bindtap="isGobindPhone" data-url="../myHobby/myHobby">

@@ -1,0 +1,23 @@
+<view class="calendar">
+	<view class='tit'>
+		<view class='pre' bindtap='gotoPreMonth'>{{'<'}}</view>
+		<view class='current'>{{currentYear}}年{{currentMonth}}月</view>
+		<view class='next' bindtap='gotoNextMonth'>{{'>'}}</view>
+	</view>
+	<view class='content'>
+		<view>日</view>
+		<view>一</view>
+		<view>二</view>
+		<view>三</view>
+		<view>四</view>
+		<view>五</view>
+		<view>六</view>
+		<view wx:for="{{allArr}}" wx:key="{{index}}" class="abcBox {{item.month == 'current' ? '' : 'gray'}}"
+		>
+		<view bindtap="goRes" data-num="{{item.num}}" data-date="{{item.date}}">
+			{{item.date}}
+		</view>
+		<view class="chang" wx:if="{{item.num}}" bindtap="goRes" data-num="{{item.num}}" data-date="{{item.date}}">{{item.num}}场</view>
+	</view>
+	</view>
+</view>

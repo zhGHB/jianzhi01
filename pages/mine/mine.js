@@ -12,8 +12,7 @@ Page({
         {name:'设置',path:'../setting/setting',iconUrl:''},
         {name:'我的钱包',path:'../myPurse/myPurse',iconUrl:''},
         {name:'联系客服',path:'../customMade/customMade',iconUrl:''},
-        {name:'帮助中心',path:'',iconUrl:''},
-        {name:'关于我们',path:'../customMade/customMade ',iconUrl:''},
+        {name:'私人定制',path:'../customMade/customMade',iconUrl:''},
         {name:'领队工作台',path:'../leadPaltform/leadPaltform',iconUrl:''},
         {name:'销售工作台 ',path:'../leadPaltform/leadPaltform?isXiaoshou=true',iconUrl:''}
      ],
@@ -28,6 +27,18 @@ Page({
   },
   goDetail(e) {
     let path = e.currentTarget.dataset.path;
+    if (path === '../leadPaltform/leadPaltform' || path === '../leadPaltform/leadPaltform?isXiaoshou=true') {
+      wx.showModal({
+       title:'提示',
+       content:'开发中',
+       success:function(res) {
+        if(res.confirm) {
+         console.log('用户点击确定')
+        }
+       }
+      });
+      return;
+    }
     wx.navigateTo({
      url:path,
     })

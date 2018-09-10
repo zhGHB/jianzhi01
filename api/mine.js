@@ -19,3 +19,9 @@ export function getContact(params) {
 	return ajax('/user/get_contacts', 1, params);
 	// body...
 }
+export function intro(argument) {
+	return ajax('/user/user_mood', 1, argument);
+}
+export function sendCode(argument) {
+	return ajax("/index/send_code", 1, argument);
+}

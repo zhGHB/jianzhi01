@@ -2,6 +2,7 @@
     "pages": [
         
         "pages/activey/activey",
+        "pages/res/res",
         "pages/calendar/calendar",
         "pages/myInt/myInt",
         "pages/addContact/addContact",
@@ -27,6 +28,7 @@
         "components/filter/filter",
         "components/search/search",
         "components/toast/toast",
+        "components/calendar/calendar",
         "pages/VIPInfo/VIPInfo",
         "pages/setting/setting",
         "pages/myPurse/myPurse",

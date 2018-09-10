@@ -40,6 +40,13 @@ Page({
       })
     });
   },
+  watch(e) {
+    console.log(e)
+    let id = e.currentTarget.dataset.id;
+    api.watch({user_id: app.globalData.userID, tags_id:id}).then((res) => {
+      
+    })
+  },
   changeTab(e) {
     let id = e.target.id;
     this.setData({tabIndex: parseInt(id)})

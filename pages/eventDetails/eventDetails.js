@@ -63,6 +63,7 @@ Page({
             });
             WxParse.wxParse('route', 'html', res.route, that, 5);
             WxParse.wxParse("rate", 'html' ,res.details, that, 5);
+            WxParse.wxParse("price_explain", 'html' ,res.price_explain, that, 5);
         });
     },
     getActiveLead(active_id) { // 获取领队

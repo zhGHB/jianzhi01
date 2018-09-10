@@ -13,3 +13,6 @@ export function zan(params) {
 export function  shareDetail(params) {
 	return ajax("share/detail",1,params);
 }
+export function watch(argument) {
+	return ajax("/user/tags_update", 1, argument);
+}

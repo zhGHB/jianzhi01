@@ -47,18 +47,9 @@ Page({
         this.search({ city: city[0] + city[1] });
     },
     calander() {
-        wx.showModal({
-            title: '提示',
-            content: '日历开发中，请试用其他功能',
-            success: function(res) {
-                if (res.confirm) {
-                    console.log('用户点击确定')
-                } else {
-                    console.log('用户点击取消')
-                }
-
-            }
-        })
+        wx.navigateTo({
+              url:'../calendar/calendar',
+             });
     },
     goDetail(e) {
         let id = e.currentTarget.dataset.id;

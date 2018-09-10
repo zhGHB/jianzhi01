@@ -1,0 +1,8 @@
+<view class="content">
+    	<view class="content-item {{index%2==0?'lf':'rt'}}" wx:for="{{list}}" wx:key="{{index}}" bindtap="goDetail" data-id="{{item.id}}">
+    		<image src="{{item.cover}}" class="cover"/>
+    		<view class="name">{{item.title}}</view>
+    		<view class="price colorY">早鸟价：¥{{item.adv_price}}</view>
+    	</view>
+    	<view style="font-size:30rpx;text-align: center;" wx:if="{{list.length === 0}}">没有搜索到数据</view>
+    </view>

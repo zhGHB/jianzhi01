@@ -1,4 +1,5 @@
 // pages/setting/setting.js
+import api from '../../api/index.js';
 let app = getApp();
 Page({
 
@@ -6,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:null
+    userInfo:null,
+    inputValue: '12121'
   },
 
   /**
@@ -15,7 +17,17 @@ Page({
   onLoad: function (options) {
     this.setData({userInfo: app.globalData.userInfo}) 
   },
+  bindKeyInput(e) {
+    this.setData({
+      inputValue: e.detail.value
+    });
+  },
+  sub() {
+    console.log(this.data.inputValue);
+    api.intro({user_id: app.globalData.userID, mood: this.data.inputValue}).then((res) => {
 
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

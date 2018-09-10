@@ -137,10 +137,17 @@
     </view>
     <!-- rate -->
     <!-- 开发中 -->
-    <view class="active-detail-box" wx:if="{{tabIndex == 1 || tabIndex == 2}}" style="font-size:30rpx;text-align: center;">
-        开发中。。。。
+    <view class="active-detail-box" wx:if="{{tabIndex == 1}}" >
+        <view class="wxParse">
+                        <template is="wxParse" data="{{wxParseData:route.nodes}}" />
+                    </view>
     </view>
-    <!-- 开发中 -->
+    <!-- 开发中 price_explain-->
+    <view class="active-detail-box" wx:if="{{tabIndex == 2}}" >
+        <view class="wxParse">
+                        <template is="wxParse" data="{{wxParseData:price_explain.nodes}}" />
+                    </view>
+    </view>
     <!-- 活动详情 -->
     <view class="active-detail-box" wx:if="{{tabIndex == 0}}">
         <view class="wxParse">

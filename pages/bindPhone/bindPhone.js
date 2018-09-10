@@ -1,5 +1,5 @@
-// pages/bindPhone/bindPhone.js
 let timer = null;
+import api from '../../api/index.js';
 Page({
 
   /**
@@ -59,6 +59,9 @@ Page({
       return;
     }
     if(!this.data.getCodeClick) return;
+    api.sendCode({mobile: this.data.phone}).then((res) => {
+
+    });
     this.setData({
       getCodeClick:false,
       timeC: this.data.allTime + 's'
