@@ -36,6 +36,6 @@
 	<view style="font-size:28rpx;text-align: center;" wx:if="{{detail.comment.length===0}}">暂无评论</view>
 </view>
 <view class="flex alignCenter send-box bgF">
-	<input type="text" name="" class="flex1 send-input" value="型录" />
-	<view class="send-btn colorF bgY">发送</view>
+	<input type="text" name="" class="flex1 send-input" value="评论" bindinput="bindKeyInput" value="{{inputValue}}" />
+	<view class="send-btn colorF bgY" bindtap="send">发送</view>
 </view>

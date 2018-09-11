@@ -1,5 +1,6 @@
 // pages/myHobby/myHobby.js
 import api from '../../api/index.js';
+let app = getApp();
 Page({
 
   /**
@@ -26,12 +27,20 @@ Page({
   },
   choose(e) {
     let Index = e.currentTarget.dataset.index;
+    let id = e.currentTarget.dataset.id;
     let list = this.data.list;
      list.map((item,index)=> {
       if(index === Index) {
         item.select = !item.select;
       }
     });
+     let params =  {
+       user_id: app.globalData.userID,
+       tags_id: id
+     }
+     api.watch(params).then((res) => {
+
+     })
     this.setData({list}) ;
   },
   /**

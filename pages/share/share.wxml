@@ -18,7 +18,7 @@
 					</view>
 				</view>
 				<view class="flex alignCenter">
-					<view class="watch-btn {{item.is_fans?'colorY borderY':''}}" bindtap="watch" data-id="{{item.id}}">+ 关注</view>
+					<view class="watch-btn {{item.is_fans?'colorY borderY':''}}" bindtap="watch" data-id="{{item.id}}" data-index="{{index}}">+ 关注</view>
 				</view>
 			</viwe>
 			<!-- 头部 -->

@@ -14,10 +14,12 @@
 		  <view class="commen-font">{{userInfo.nickName}}</view>
 	   </view>
     </view>
-        <view class="item-box border-top" bindtap="isGobindPhone" data-url="../bindPhone/bindPhone">
+        <view class="item-box border-top" >
     	   <view class="item flex flex-bettewn bgF">
     		  <view class="commen-font">手机号</view>
-    		  <view class="commen-font" style="color:red">未绑定</view>
+    		  <view class="commen-font" style="color:red" wx:if="{{!myInfo.mobile}}" bindtap="isGobindPhone" 
+    		  data-url="../bindPhone/bindPhone">未绑定</view>
+    		  <view class="commen-font" wx:if="{{myInfo.mobile}}">myInfo.mobile</view>
     	   </view>
         </view>
     <view class="item-box border-top" bindtap="isGobindPhone">
@@ -33,7 +35,7 @@
 		  <view class="commen-font">个人介绍</view>
 		  <view class="commen-font">
 		  	<input  placeholder="请输入个人介绍" class="into" focus bindinput="bindKeyInput"
-		  	bindblur="sub"/>
+		  	bindblur="sub" value="{{myInfo.mood}}" />
 		  </view>
 	   </view>
     </view>

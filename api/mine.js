@@ -25,3 +25,6 @@ export function intro(argument) {
 export function sendCode(argument) {
 	return ajax("/index/send_code", 1, argument);
 }
+export function udateCover(argument) {
+	return ajax("/user/user_cover", 1, argument);
+}

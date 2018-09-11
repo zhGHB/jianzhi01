@@ -8,14 +8,23 @@ Page({
    */
   data: {
     userInfo:null,
-    inputValue: '12121'
+    inputValue: '121',
+    myInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({userInfo: app.globalData.userInfo}) 
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      myInfo: app.globalData.myInfo
+    },() => {
+      console.log(app.globalData.myInfo);
+      console.log("333333333333333")
+    });
+    console.log(app.globalData.myInfo);
+    console.log("dddddddddd")
   },
   bindKeyInput(e) {
     this.setData({
@@ -41,10 +50,10 @@ Page({
     if(!url) {
       wx.showModal({
                   title: '提示',
-                  content: '开发中',
+                  content: '更改封面',
                   success: function (res) {
                       if (res.confirm) {
-                          console.log('用户点击确定')
+                          console.log('更改封面')
                       }else{
                          console.log('用户点击取消')
                       }

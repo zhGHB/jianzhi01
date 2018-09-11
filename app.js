@@ -12,8 +12,9 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         api.getCode({code: res.code}).then((myRes)=> {
-          console.log(myRes);
-          console.log("ddddddddddddddddddd")
+          console.log(myRes)
+          this.globalData.userID = myRes.user_id;
+          this.globalData.myInfo = myRes;
         })
 
       }
@@ -40,6 +41,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    userID: 3
+    userID: 3,
+    myInfo: null
   }
 })

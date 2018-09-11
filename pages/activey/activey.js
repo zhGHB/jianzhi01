@@ -1,4 +1,3 @@
-// pages/activey/activey.js
 let app = getApp();
 import api from '../../api/index.js';
 Page({
@@ -21,9 +20,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
     this.getBanner();
     this.getCate();
     this.getIntTab();
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        api.getCode({code: res.code}).then((myRes)=> {
+          api.getIntTag({user_id: myRes.user_id}).then((res)=> {
+            that.setData({tag: res});
+          })
+        })
+
+      }
+    })
   },
   getBanner() {
     api.getActiveBanner().then((res)=>{
@@ -48,9 +59,7 @@ Page({
     })
   },
   getIntTab() {
-    api.getIntTag({user_id: app.globalData.userID}).then((res)=> {
-      this.setData({tag: res});
-    })
+    
   },
   // 获取分类
   getCate() {

@@ -29,6 +29,5 @@ page {
 	margin-top: 16rpx;
 }
 .into {
-	border:1px solid red;
 	text-align: right;
 }

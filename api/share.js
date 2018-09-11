@@ -16,3 +16,7 @@ export function  shareDetail(params) {
 export function watch(argument) {
 	return ajax("/user/tags_update", 1, argument);
 }
+export function shareRate(argument) {
+	return ajax("/index/sub_comment", 1, argument);
+	// body...
+}

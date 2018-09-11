@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 42,
+			"current": 44,
 			"list": [
 				{
 					"id": -1,
@@ -282,15 +282,28 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 41,
 					"name": "set",
 					"pathName": "pages/setting/setting",
-					"query": ""
+					"query": "id=4"
 				},
 				{
 					"id": -1,
 					"name": "ph",
-					"pathName": "pages/bindPhone/bindPhone"
+					"pathName": "pages/bindPhone/bindPhone",
+					"query": ""
+				},
+				{
+					"id": 43,
+					"name": "ret",
+					"pathName": "pages/rate/rate",
+					"query": "id=4"
+				},
+				{
+					"id": -1,
+					"name": "int",
+					"pathName": "pages/myHobby/myHobby",
+					"query": "id=4"
 				}
 			]
 		}

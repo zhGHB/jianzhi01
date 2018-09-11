@@ -2,7 +2,9 @@
 	选择标签，不错过活动！ 
 </view>
 <view class="box">
-	<view class="item {{index%3==1?'m':''}}" wx:for="{{list}}" bindtap="choose" data-index="{{index}}">
+	<view class="item {{index%3==1?'m':''}}" wx:for="{{list}}" bindtap="choose" 
+	data-id="{{item.tags_id}}"
+	data-index="{{index}}">
 		<image src="{{item.img}}" class="img"/>
 		<view class="text-box flex flex-bettewn">
 			<view>

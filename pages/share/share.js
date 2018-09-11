@@ -41,10 +41,16 @@ Page({
     });
   },
   watch(e) {
-    console.log(e)
+    console.log(e);
+    let tabs = this.data.tabs;
     let id = e.currentTarget.dataset.id;
-    api.watch({user_id: app.globalData.userID, tags_id:id}).then((res) => {
-      
+    let index = e.currentTarget.dataset.index;
+    let list = tabs[this.data.tabIndex].list;
+    list = JSON.parse(JSON.stringify(list));
+    api.watchLead({user_id: app.globalData.userID, lander_id:id}).then((res) => {
+        list[index].is_fans = list[index].is_fans === 1? 0 : 1;
+        tabs[this.data.tabIndex].list = list;
+        this.setData({tabs});
     })
   },
   changeTab(e) {
