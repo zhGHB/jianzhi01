@@ -1,5 +1,5 @@
 //app.js
-import api from './api/index.js';
+import api from './api/index.js';//121
 App({
   onLaunch: function () {
     // 展示本地存储能力
